@@ -94,33 +94,34 @@
         .abstract-container {
             margin-top: 12px;
         }
-      .abstract-button {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    padding: 8px 16px; /* Adjusted padding */
-    background-color: transparent; /* Matches the background */
-    font-size: 18px; /* Matches text size */
-    color: #444; /* Matches text color */
-    cursor: pointer;
-    border: none; /* No button border */
-    font-family: inherit; /* Inherit font from body */
-}
+        .abstract-button {
+            display: inline-flex; /* Make the button inline, like text */
+            align-items: center;
+            justify-content: start;
+            padding: 0; /* Remove extra padding */
+            background-color: transparent; /* Remove background */
+            font-size: inherit; /* Inherit font size from the surrounding text */
+            color: inherit; /* Inherit text color */
+            cursor: pointer;
+            border: none; /* Remove border */
+            font-family: inherit; /* Ensure it uses Proxima Nova */
+        }
 
-.abstract-button span {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    color: #444; /* Matches text color */
-    margin-left: 10px;
-    text-align: center;
-    line-height: 24px; /* Center text vertically */
-    font-size: 16px; /* Matches button font size */
-    font-weight: bold;
-    border: 2px solid #444; /* Add border around the plus/minus sign */
-    border-radius: 4px; /* Optional rounded corners */
-    background-color: transparent; /* Match background */
-}
+        .abstract-button span {
+            display: inline-block; /* Inline element for the +/- sign */
+            width: 24px;
+            height: 24px;
+            color: inherit; /* Match the text color */
+            margin-left: 8px; /* Slight margin to separate from the word "Abstract" */
+            text-align: center;
+            line-height: 24px; /* Center text vertically */
+            font-size: 16px; /* Match button font size */
+            font-weight: bold;
+            border: 1px solid #444; /* Add a border around the +/- sign */
+            border-radius: 4px; /* Optional rounded corners */
+            background-color: transparent; /* Match the background */
+        }
+
         .abstract-text {
             display: none;
             font-size: 18px; /* Increased font size */
