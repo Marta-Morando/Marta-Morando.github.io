@@ -83,17 +83,23 @@
             font-weight: bold;
             text-decoration: underline; /* Underline the title */
         }
-        .research-coauthors a {
-            font-family: 'Proxima Nova', Arial, sans-serif;
-            font-size: 20px; /* Increased font size */
-            color: #888; /* Light gray */
-            margin-left: 10px;
-            text-decoration: none;
-            font-weight: normal; /* Remove bold style */
-            border-bottom: 1px dotted #888;
-        }
-        .research-coauthors a:hover {
-            border-bottom: 1px solid #888; /* Make it solid on hover */
+        .research-coauthors {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    font-size: 20px; /* Font size for coauthors */
+    color: #888; /* Light gray color for coauthors */
+    margin-left: 10px;
+    font-weight: normal; /* Remove bold style */
+}
+
+.research-coauthors a {
+    color: #888; /* Set link color to match "with" */
+    text-decoration: none; /* Remove default underline */
+    border-bottom: 1px dotted #888; /* Add dotted effect */
+}
+
+.research-coauthors a:hover {
+    border-bottom: none; /* No underline or dots on hover */
+    color: #888; /* Ensure hover color stays the same */
 }
         .research-funding {
             font-size: 18px; /* Increased font size */
