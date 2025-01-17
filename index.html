@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marta Morando</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Proxima Nova', sans-serif;
@@ -19,7 +18,6 @@
             font-size: 36px;
             color: #4a86e8; /* Match link color */
             margin-bottom: 20px;
-            text-align: center; /* Center the title */
         }
         a {
             color: #4a86e8; /* Light blue for links */
@@ -30,21 +28,24 @@
         }
         .container {
             display: flex;
-            flex-direction: column; /* Stack photo and text */
-            align-items: center; /* Center align */
-            gap: 20px; /* Space between photo and text */
+            flex-direction: row; /* Horizontal layout */
+            gap: 40px; /* Space between sections */
             max-width: 1200px;
             margin: 0 auto;
         }
+        .left-section {
+            width: 35%; /* Left side proportion */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align to the left */
+            gap: 20px;
+        }
         .photo-section {
-            text-align: center;
-            max-width: 200px;
-            margin: 0 auto; /* Center photo */
+            max-width: 100%; /* Full width within the left section */
         }
         .photo-section img {
             width: 100%;
             height: auto;
-            border-radius: 0;
         }
         .links {
             margin-top: 20px;
@@ -54,8 +55,8 @@
             margin: 10px 0;
             font-size: 18px;
         }
-        .description-section {
-            text-align: center; /* Center-align text */
+        .right-section {
+            width: 65%; /* Right side proportion */
         }
         .research {
             margin-top: 30px;
@@ -67,23 +68,27 @@
     </style>
 </head>
 <body>
-    <h1>Marta Morando</h1>
     <div class="container">
-        <div class="photo-section">
-            <img src="IMG_4563.jpg" alt="Marta Morando">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1>Marta Morando</h1>
+            <div class="photo-section">
+                <img src="IMG_4563.jpg" alt="Marta Morando">
+            </div>
             <div class="links">
                 <a href="https://www.dropbox.com/scl/fi/miko5m5xwgf9dlz74ztgu/cv_morando_marta.pdf?rlkey=8knb6w503mv2thl35ik4wxivq&st=853k355z&raw=1" target="_blank">CV</a>
                 <a href="https://x.com/MorandoMarta" target="_blank">X (Twitter)</a>
                 <a href="https://bsky.app/profile/martamorando.bsky.social" target="_blank">Bluesky</a>
             </div>
         </div>
-        <div class="description-section">
+        <!-- Right Section -->
+        <div class="right-section">
             <p>
                 I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with 
                 <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>.
             </p>
             <p>
-                My primary research field is Political Economy. 
+                I work on topics related to political economy, labour, organization, and innovation. 
             </p>
             <p>You can contact me at: m.morando1 [at] lse.ac.uk</p>
             <div class="research">Research In Progress</div>
