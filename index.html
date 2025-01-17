@@ -9,14 +9,14 @@
         body {
             font-family: 'Proxima Nova', sans-serif;
             margin: 20px;
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 18px; /* Increased font size */
+            line-height: 1.8; /* Increased line height */
             color: #444;
             background-color: #ffffff; /* White background */
         }
         h1 {
             font-family: 'Proxima Nova', serif;
-            font-size: 34px;
+            font-size: 40px; /* Increased font size */
             color: #4a86e8;
             margin-bottom: 10px;
         }
@@ -30,7 +30,7 @@
         .container {
             display: flex;
             flex-direction: row; 
-            align-items: flex-start; /* Align text and image */
+            align-items: stretch; /* Align items with equal height */
             gap: 20px; 
             max-width: 1200px;
             margin: 0 auto;
@@ -44,7 +44,7 @@
         .photo-section img {
             width: 100%;
             height: auto;
-            max-width: 200px;
+            max-width: 250px; /* Increased image size */
         }
         .links {
             margin-top: 10px;
@@ -54,33 +54,29 @@
             align-items: center;
             gap: 5px;
             margin: 5px 10px 5px 0;
-            font-size: 16px;
-        }
-        .links a .icon {
-            font-size: 18px;
+            font-size: 18px; /* Increased font size */
         }
         .right-section {
             width: 65%;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            margin-top: 0; /* Align with image */
+            justify-content: center; /* Align text vertically */
         }
         .research {
             margin-top: 20px;
             font-family: 'Lora', serif;
-            font-size: 24px;
+            font-size: 26px; /* Increased font size */
             font-weight: bold;
             color: #111;
         }
         .research-title {
             margin-top: 15px;
-            font-size: 18px;
+            font-size: 20px; /* Increased font size */
             color: #000;
             font-weight: bold;
         }
         .research-coauthors {
-            font-size: 14px;
+            font-size: 16px; /* Increased font size */
             color: #aaa; /* Light gray */
             margin-left: 10px;
         }
@@ -89,7 +85,7 @@
             text-decoration: none;
         }
         .research-funding {
-            font-size: 16px;
+            font-size: 18px; /* Increased font size */
             color: #888;
         }
         .abstract-container {
@@ -99,28 +95,29 @@
             display: flex;
             align-items: center;
             justify-content: start;
-            padding: 10px 15px;
-            background-color: #f0f0f0; /* Light gray background */
-            font-size: 16px;
+            padding: 12px 20px; /* Increased padding */
+            background-color: #ffffff; /* White background */
+            font-size: 18px; /* Increased font size */
             font-weight: bold;
-            color: #444; /* Dark gray text */
+            color: #aaa; /* Light gray text */
             cursor: pointer;
-            border: none; /* No border */
+            border: 1px solid #aaa; /* Light gray border */
+            border-radius: 5px; /* Rounded corners */
         }
         .abstract-button span {
             display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 1px solid #444; /* Square border */
+            width: 24px;
+            height: 24px;
+            border: 1px solid #aaa; /* Light gray square border */
             margin-left: 10px;
             text-align: center;
-            line-height: 18px;
-            font-size: 14px;
+            line-height: 22px;
+            font-size: 16px;
             font-weight: bold;
         }
         .abstract-text {
             display: none;
-            font-size: 16px;
+            font-size: 18px; /* Increased font size */
             margin-top: 10px;
             color: #444;
         }
@@ -134,7 +131,7 @@
                 width: 100%;
             }
             h1 {
-                font-size: 28px;
+                font-size: 32px;
                 text-align: center;
             }
             .photo-section img {
