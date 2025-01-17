@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marta Morando</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Proxima Nova', sans-serif;
@@ -15,7 +16,7 @@
         }
         h1 {
             font-family: 'Proxima Nova', serif;
-            font-size: 32px; 
+            font-size: 34px;
             color: #4a86e8;
             margin-bottom: 10px;
         }
@@ -49,9 +50,14 @@
             margin-top: 10px;
         }
         .links a {
-            display: inline-block;
-            margin: 5px 10px 5px 0; /* Add spacing for inline alignment */
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin: 5px 10px 5px 0;
             font-size: 16px;
+        }
+        .links a .icon {
+            font-size: 18px;
         }
         .right-section {
             width: 65%;
@@ -74,9 +80,13 @@
             font-weight: bold;
         }
         .research-coauthors {
-            font-size: 18px;
-            color: #4a86e8; /* Match link color */
+            font-size: 14px;
+            color: #aaa; /* Light gray */
             margin-left: 10px;
+        }
+        .research-coauthors a {
+            color: #4a86e8; /* Link color for "Gaia Dossi" */
+            text-decoration: none;
         }
         .research-funding {
             font-size: 16px;
@@ -90,18 +100,18 @@
             align-items: center;
             justify-content: start;
             padding: 10px 15px;
-            border: 1px solid #000;
-            background-color: transparent;
+            background-color: #f0f0f0; /* Light gray background */
             font-size: 16px;
             font-weight: bold;
-            color: #000;
+            color: #444; /* Dark gray text */
             cursor: pointer;
+            border: none; /* No border */
         }
         .abstract-button span {
             display: inline-block;
             width: 20px;
             height: 20px;
-            border: 1px solid #000;
+            border: 1px solid #444; /* Square border */
             margin-left: 10px;
             text-align: center;
             line-height: 18px;
@@ -158,9 +168,10 @@
                 <img src="IMG_4563.jpg" alt="Marta Morando">
             </div>
             <div class="links">
-                <a href="https://www.dropbox.com/scl/fi/miko5m5xwgf9dlz74ztgu/cv_morando_marta.pdf?rlkey=8knb6w503mv2thl35ik4wxivq&st=853k355z&raw=1" target="_blank">CV</a>
+                 <a href="https://www.dropbox.com/scl/fi/miko5m5xwgf9dlz74ztgu/cv_morando_marta.pdf?rlkey=8knb6w503mv2thl35ik4wxivq&st=853k355z&raw=1" target="_blank">CV</a>
                 <a href="https://x.com/MorandoMarta" target="_blank">X (Twitter)</a>
                 <a href="https://bsky.app/profile/martamorando.bsky.social" target="_blank">Bluesky</a>
+                </a>
             </div>
         </div>
         <!-- Right Section -->
@@ -176,7 +187,7 @@
             <div class="research">Research In Progress</div>
             <div class="research-title">
                 Polarized Technologies
-                <a href="https://sites.google.com/view/gaiadossi" class="research-coauthors" target="_blank">with Gaia Dossi</a>
+                <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
             </div>
             <div class="research-funding">
                 Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE
