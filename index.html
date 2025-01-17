@@ -94,30 +94,33 @@
         .abstract-container {
             margin-top: 12px;
         }
-        .abstract-button {
-            display: flex;
-            align-items: center;
-            justify-content: start;
-            padding: 12px 20px; /* Increased padding */
-            background-color: #ffffff; /* Updated background color */
-            font-size: 12px; /* Increased font size */
-            color: #4a4949; /* White text */
-            cursor: pointer;
-            border: none; /* Removed border */
-            border-radius: 3px; /* Rounded corners */
-        }
-        .abstract-button span {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            background-color: #ffffff; /* White background for span */
-            color: #4a4949; /* Updated text color */
-            margin-left: 10px;
-            text-align: center;
-            line-height: 22px;
-            font-size: 16px;
-            font-weight: bold;
-        }
+      .abstract-button {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 8px 16px; /* Adjusted padding */
+    background-color: transparent; /* Matches the background */
+    font-size: 18px; /* Matches text size */
+    color: #444; /* Matches text color */
+    cursor: pointer;
+    border: none; /* No button border */
+    font-family: inherit; /* Inherit font from body */
+}
+
+.abstract-button span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    color: #444; /* Matches text color */
+    margin-left: 10px;
+    text-align: center;
+    line-height: 24px; /* Center text vertically */
+    font-size: 16px; /* Matches button font size */
+    font-weight: bold;
+    border: 2px solid #444; /* Add border around the plus/minus sign */
+    border-radius: 4px; /* Optional rounded corners */
+    background-color: transparent; /* Match background */
+}
         .abstract-text {
             display: none;
             font-size: 18px; /* Increased font size */
@@ -189,12 +192,13 @@
             <div class="research-funding">
                 Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE
             </div>
-            <div class="abstract-container">
-                <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button>
-                <div class="abstract-text" id="abstract-text">
-                    We document that inventors patent and cite technologies aligned with the views of their political party. We link inventors to U.S. voter registration data and map politically polarized issues to technologies. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate change mitigation or women’s reproductive health, and one-third less likely to patent weapons. These findings hold across patent and inventor returns, organization characteristics, and within assignees. A similar pattern holds in the diffusion of innovation: Republicans and Democrats are on average 20% differently likely to cite polarized technologies.
-                </div>
-            </div>
+           <div class="abstract-container">
+    <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button>
+    <div class="abstract-text" id="abstract-text">
+        We document that inventors patent and cite technologies aligned with the views of their political party. We link inventors to U.S. voter registration data and map politically polarized issues to technologies. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate change mitigation or women’s reproductive health, and one-third less likely to patent weapons. These findings hold across patent and inventor returns, organization characteristics, and within assignees. A similar pattern holds in the diffusion of innovation: Republicans and Democrats are on average 20% differently likely to cite polarized technologies.
+    </div>
+</div>
+
         </div>
     </div>
 </body>
