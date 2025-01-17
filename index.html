@@ -8,29 +8,32 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            font-size: 18px; /* Larger font size for desktop */
+            line-height: 1.6; /* Better line spacing */
         }
         .container {
             display: flex;
             align-items: flex-start;
-            gap: 20px;
+            gap: 30px; /* Larger gap for better spacing */
         }
         .photo-section {
             text-align: center;
-            max-width: 150px;
+            max-width: 200px; /* Increased image container size */
         }
         .photo-section img {
             width: 100%;
             height: auto;
-            border-radius: 0; /* Remove rounded corners for squared image */
+            border-radius: 0; /* Square image */
         }
         .links {
-            margin-top: 10px;
+            margin-top: 15px;
         }
         .links a {
             display: block;
-            margin: 5px 0;
-            color: #4a86e8;
+            margin: 8px 0; /* Increased margin for better spacing */
+            color: #4a86e8; /* Light blue link color */
             text-decoration: none;
+            font-size: 18px; /* Match overall font size */
         }
         .links a:hover {
             text-decoration: underline;
@@ -38,9 +41,17 @@
         .description-section {
             flex-grow: 1;
         }
+        .description-section a {
+            color: #4a86e8; /* Matching link color */
+            text-decoration: none;
+        }
+        .description-section a:hover {
+            text-decoration: underline;
+        }
         .research {
-            margin-top: 20px;
+            margin-top: 30px; /* More space above "Research In Progress" */
             font-weight: bold;
+            font-size: 20px; /* Slightly larger for emphasis */
             color: #333;
         }
     </style>
@@ -51,17 +62,17 @@
             <img src="IMG_4563.jpg" alt="Marta Morando">
             <div class="links">
                 <a href="https://www.dropbox.com/scl/fi/miko5m5xwgf9dlz74ztgu/cv_morando_marta.pdf?rlkey=8knb6w503mv2thl35ik4wxivq&st=853k355z&raw=1" target="_blank">CV</a>
-                <a href="https://twitter.com/your-twitter-handle" target="_blank">Twitter</a>
+                <a href="https://x.com/MorandoMarta" target="_blank">X (Twitter)</a>
+                <a href="https://bsky.app/profile/martamorando.bsky.social" target="_blank">Bluesky</a>
             </div>
         </div>
         <div class="description-section">
             <p>
-                I am a fourth-year PhD student in Economics at the London School of Economics, where I am affiliated with 
+                I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with 
                 <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>.
             </p>
             <p>
-                My primary research field is Political Economy. For more information, please see my 
-                <a href="https://www.dropbox.com/scl/fi/miko5m5xwgf9dlz74ztgu/cv_morando_marta.pdf?rlkey=8knb6w503mv2thl35ik4wxivq&st=853k355z&raw=1" target="_blank">CV</a>.
+                My primary research field is Political Economy.
             </p>
             <p>You can contact me at: m.morando1 [at] lse.ac.uk</p>
             <div class="research">Research In Progress</div>
