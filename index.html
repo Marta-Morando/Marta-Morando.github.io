@@ -70,6 +70,41 @@
             font-weight: bold;
             color: #111; /* Very dark gray */
         }
+        .research-title {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #000; /* Black */
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .research-coauthors {
+            font-size: 18px;
+            color: #888; /* Gray */
+            font-style: italic;
+        }
+        .research-funding {
+            font-size: 18px;
+            color: #888; /* Gray */
+        }
+        /* Responsive design for mobile devices */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack sections vertically */
+                gap: 20px;
+            }
+            .left-section, .right-section {
+                width: 100%; /* Full width for both sections */
+            }
+            h1 {
+                text-align: center; /* Center title on mobile */
+            }
+            .photo-section img {
+                margin: 0 auto; /* Center image on mobile */
+            }
+            .links {
+                text-align: center; /* Center links on mobile */
+            }
+        }
     </style>
 </head>
 <body>
@@ -97,6 +132,11 @@
             </p>
             <p>You can contact me at: m.morando1 [at] lse.ac.uk</p>
             <div class="research">Research In Progress</div>
+            <div class="research-title">Polarized Technologies</div>
+            <div class="research-coauthors">(with Gaia Dossi)</div>
+            <div class="research-funding">
+                Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE
+            </div>
         </div>
     </div>
 </body>
