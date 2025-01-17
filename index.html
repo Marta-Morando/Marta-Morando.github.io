@@ -4,59 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marta Morando</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            font-size: 18px; /* Larger font size for desktop */
-            line-height: 1.6; /* Better line spacing */
+            font-family: 'Roboto', sans-serif;
+            margin: 40px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444; /* Neutral text color */
+            background-color: #f9f9f9; /* Light background */
+        }
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 36px;
+            color: #222; /* Darker text for headings */
+            margin-bottom: 20px;
+        }
+        a {
+            color: #4a86e8; /* Light blue for links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         .container {
             display: flex;
             align-items: flex-start;
-            gap: 30px; /* Larger gap for better spacing */
+            gap: 40px; /* Larger gap for balance */
+            max-width: 1200px;
+            margin: 0 auto; /* Center content */
         }
         .photo-section {
             text-align: center;
-            max-width: 200px; /* Increased image container size */
+            max-width: 200px;
         }
         .photo-section img {
             width: 100%;
             height: auto;
-            border-radius: 0; /* Square image */
+            border-radius: 0; /* Keep square image */
         }
         .links {
-            margin-top: 15px;
+            margin-top: 20px;
         }
         .links a {
             display: block;
-            margin: 8px 0; /* Increased margin for better spacing */
-            color: #4a86e8; /* Light blue link color */
-            text-decoration: none;
-            font-size: 18px; /* Match overall font size */
-        }
-        .links a:hover {
-            text-decoration: underline;
+            margin: 10px 0;
+            font-size: 18px;
         }
         .description-section {
             flex-grow: 1;
         }
-        .description-section a {
-            color: #4a86e8; /* Matching link color */
-            text-decoration: none;
-        }
-        .description-section a:hover {
-            text-decoration: underline;
-        }
         .research {
-            margin-top: 30px; /* More space above "Research In Progress" */
+            margin-top: 30px;
+            font-family: 'Lora', serif;
+            font-size: 24px;
             font-weight: bold;
-            font-size: 20px; /* Slightly larger for emphasis */
-            color: #333;
+            color: #222;
         }
     </style>
 </head>
 <body>
+    <h1>Marta Morando</h1>
     <div class="container">
         <div class="photo-section">
             <img src="IMG_4563.jpg" alt="Marta Morando">
@@ -68,11 +76,11 @@
         </div>
         <div class="description-section">
             <p>
-                I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with 
+                I PhD candidate in Economics at the London School of Economics, where I am affiliated with 
                 <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>.
             </p>
             <p>
-                My primary research field is Political Economy.
+                My primary research field is Political Economy. 
             </p>
             <p>You can contact me at: m.morando1 [at] lse.ac.uk</p>
             <div class="research">Research In Progress</div>
