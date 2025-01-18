@@ -129,12 +129,14 @@
          .abstract-button {
             display: inline-flex;
             align-items: center; /* Ensures vertical alignment of text and icon */
-            padding: 4px 8px; /* Reduced padding for a smaller button */
+            padding: 0; /* Remove extra padding */
+            margin-top: 0; /* Ensures alignment with the text above */
             background-color: transparent;
             font-size: 16px; /* Adjust font size for the text */
             color: #666; /* Lighter gray for the text */
             cursor: pointer;
             border: none;
+            line-height: 1.5; /* Matches the line height of surrounding text */
         }
 
         .abstract-button span {
@@ -227,7 +229,7 @@
                 I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with
                 <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>. I work on topics related to political economy, labour, organization, and innovation.
             </p>
-            <p class="intro-text">For more information, please see my CV.</p>
+            <p class="intro-text">You can click on my CV <a href="cv/cv_morando_marta.pdf" target="_blank">here</a>.</p>
             <div class="research">Research In Progress</div>
             <div class="research-title">
                 <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Polarized Technologies</a>
