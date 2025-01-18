@@ -22,8 +22,8 @@
             background-color: #ffffff;
         }
         h1 {
-             font-family: 'Proxima Nova', Arial, sans-serif;
-            font-size: 250%; /* Adjust this to make it match the image height */
+            font-family: 'Proxima Nova', Arial, sans-serif;
+            font-size: 220%; /* Adjusted for better alignment with the image */
             color: #2b2b2b;
             margin-bottom: 10px;
             text-align: left;
@@ -128,47 +128,71 @@
         .abstract-container {
             margin-top: 12px;
         }
-         .abstract-button {
+        .abstract-button {
             display: inline-flex;
-            align-items: center; /* Ensures vertical alignment of text and icon */
-            padding: 0; /* Remove extra padding */
-            margin-top: 0; /* Ensures alignment with the text above */
+            align-items: center;
+            padding: 0;
+            margin-top: 0;
             background-color: transparent;
-            font-size: 16px; /* Adjust font size for the text */
-            color: #666; /* Lighter gray for the text */
+            font-size: 16px;
+            color: #666;
             cursor: pointer;
             border: none;
-            line-height: 1.5; /* Matches the line height of surrounding text */
+            line-height: 1.5;
         }
 
         .abstract-button span {
             display: inline-block;
-            width: 20px; /* Size of the plus/minus icon */
+            width: 20px;
             height: 20px;
             color: #666;
-            margin-left: 8px; /* Proper spacing between the text and the icon */
+            margin-left: 8px;
             text-align: center;
-            line-height: 20px; /* Ensures the icon is vertically centered */
-            font-size: 14px; /* Icon font size */
+            line-height: 20px;
+            font-size: 14px;
             font-weight: bold;
-            border: 1px solid #666; /* Border matches the text color */
-            border-radius: 0; /* Makes the border square */
+            border: 1px solid #666;
+            border-radius: 0;
             background-color: transparent;
         }
 
         .abstract-button:hover {
-            color: #444; /* Slightly darker text color on hover */
+            color: #444;
         }
 
         .abstract-button span:hover {
-            border-color: #444; /* Slightly darker border on hover */
+            border-color: #444;
         }
+
         .abstract-text {
             display: none;
             font-size: 18px;
             margin-top: 10px;
             color: #888;
         }
+
+        .paper-button {
+            margin-left: 10px;
+            padding: 6px 12px;
+            background-color: #2b2b2b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .paper-button:hover {
+            background-color: #444;
+        }
+
+        .paper-button a {
+            text-decoration: none;
+            color: #fff;
+        }
+
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -187,31 +211,6 @@
             .links {
                 justify-content: center;
             }
-           .paper-button {
-            margin-left: 10px; /* Space between the coauthors text and the button */
-            padding: 4px 10px; /* Adjust padding for the button */
-            background-color: transparent; /* No background color */
-            border: 1px solid #2b2b2b; /* Subtle border for the button */
-            border-radius: 4px; /* Rounded corners */
-            cursor: pointer;
-            transition: all 0.3s ease; /* Smooth hover effect */
-        }
-
-        .paper-button a {
-            text-decoration: none;
-            color: #2b2b2b; /* Button text color */
-            font-size: 14px; /* Font size for text */
-            font-weight: normal; /* Normal font weight for minimalist look */
-        }
-
-        .paper-button:hover {
-            background-color: #2b2b2b; /* Subtle background fill on hover */
-            color: #fff; /* White text on hover */
-        }
-
-        .paper-button a:hover {
-            color: #fff; /* Ensure link text color matches on hover */
-        }
         }
     </style>
     <script>
@@ -231,7 +230,6 @@
 <body>
     <h1>Marta Morando</h1>
     <div class="container">
-        <!-- Left Section -->
         <div class="left-section">
             <div class="photo-section">
                 <img src="pictures/profile.jpg" alt="Marta Morando">
@@ -250,23 +248,22 @@
                 </a>
             </div>
         </div>
-        <!-- Right Section -->
         <div class="right-section">
             <p class="intro-text">
                 I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with
                 <a href="https://sticerd.lse.ac.uk/" target="_blank" style="text-decoration: underline;">STICERD</a>. I work on topics related to political economy, labour, organization, and innovation.
             </p>
             <p class="intro-text">
-    You can click on my CV <a href="cv/cv_morando_marta.pdf" target="_blank" style="text-decoration: underline;">here</a>.
-</p>
+                You can click on my CV <a href="cv/cv_morando_marta.pdf" target="_blank" style="text-decoration: underline;">here</a>.
+            </p>
 
             <div class="research">Research In Progress</div>
             <div class="research-title">
                 <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Polarized Technologies</a>
                 <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
                 <button class="paper-button">
-        <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank" class="paper-link">Paper</a>
-    </button>
+                    <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Paper</a>
+                </button>
             </div>
             <div class="research-funding">
                 Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE
