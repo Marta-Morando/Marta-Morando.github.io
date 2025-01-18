@@ -185,24 +185,31 @@
             .links {
                 justify-content: center;
             }
-            .paper-button {
-            margin-left: 10px; /* Space between the coauthors text and the button */
-            padding: 4px 10px; /* Adjust padding for a compact button */
-            background-color: #2b2b2b; /* Button background color */
-            border: none;
-            border-radius: 4px; /* Rounded corners */
-            cursor: pointer;
-        }
+           .paper-button {
+                margin-left: 10px; /* Space between the coauthors text and the button */
+                padding: 4px 10px; /* Adjust padding for the button */
+                background-color: transparent; /* No background color */
+                border: 1px solid #2b2b2b; /* Subtle border for the button */
+                border-radius: 4px; /* Rounded corners */
+                cursor: pointer;
+                transition: all 0.3s ease; /* Smooth hover effect */
+            }
 
-        .paper-button a {
-            text-decoration: none;
-            color: #fff; /* Button text color */
-            font-size: 14px;
-        }
+            .paper-button a {
+                text-decoration: none;
+                color: #2b2b2b; /* Button text color */
+                font-size: 14px; /* Font size for text */
+                font-weight: normal; /* Normal font weight for minimalist look */
+            }
 
-        .paper-button:hover {
-            background-color: #444; /* Darker background on hover */
-        }
+            .paper-button:hover {
+                background-color: #2b2b2b; /* Subtle background fill on hover */
+                color: #fff; /* White text on hover */
+            }
+
+            .paper-button a:hover {
+                color: #fff; /* Ensure link text color matches on hover */
+            }
 
         }
     </style>
