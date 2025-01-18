@@ -68,14 +68,14 @@
         .links a img {
             width: 24px;
             height: 24px;
-            vertical-align: middle; /* Ensures all icons are perfectly aligned */
+            vertical-align: middle;
         }
         .icon-envelope {
-            fill: #68B6EF; /* Light blue color */
-            transition: fill 0.2s ease-in-out; /* Smooth transition for hover effect */
+            fill: #68B6EF;
+            transition: fill 0.2s ease-in-out;
         }
         .icon-envelope:hover {
-            fill: grey; /* Change to grey on hover */
+            fill: grey;
         }
         .right-section {
             width: 65%;
@@ -177,6 +177,19 @@
             }
         }
     </style>
+    <script>
+        function toggleAbstract() {
+            const abstractText = document.getElementById('abstract-text');
+            const buttonSpan = document.getElementById('button-icon');
+            if (abstractText.style.display === 'none' || !abstractText.style.display) {
+                abstractText.style.display = 'block';
+                buttonSpan.textContent = '-';
+            } else {
+                abstractText.style.display = 'none';
+                buttonSpan.textContent = '+';
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Marta Morando</h1>
@@ -207,7 +220,7 @@
                 <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>. I work on topics related to political economy, labour, organization, and innovation.
             </p>
             <p class="intro-text">You can contact me at: m.morando1 [at] lse.ac.uk</p>
-<div class="research">Research In Progress</div>
+            <div class="research">Research In Progress</div>
             <div class="research-title">
                 <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Polarized Technologies</a>
                 <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
