@@ -126,32 +126,41 @@
         .abstract-container {
             margin-top: 12px;
         }
-        .abstract-button {
+               .abstract-button {
             display: inline-flex;
             align-items: center;
             justify-content: start;
-            padding: 0;
+            padding: 4px 8px; /* Reduced padding for a smaller button */
             background-color: transparent;
-            font-size: inherit;
-            color: inherit;
+            font-size: 16px; /* Adjusted font size */
+            color: #666; /* Lighter gray for the text */
             cursor: pointer;
             border: none;
-             color: #4a4949
         }
+
         .abstract-button span {
             display: inline-block;
-            width: 24px;
-            height: 24px;
-            color: #4a4949
-             margin-left: 8px;
+            width: 20px; /* Reduced size of the plus/minus icon */
+            height: 20px; /* Reduced size of the plus/minus icon */
+            color: #666;
+            margin-left: 10px; /* Added spacing between the word and the icon */
             text-align: center;
-            line-height: 24px;
-            font-size: 16px;
+            line-height: 20px;
+            font-size: 14px; /* Adjusted font size of the icon */
             font-weight: bold;
-            border: 1px solid #444;
+            border: 1px solid #666; /* Border matches the text color */
             border-radius: 4px;
             background-color: transparent;
         }
+
+        .abstract-button:hover {
+            color: #444; /* Slightly darker text color on hover */
+        }
+
+        .abstract-button span:hover {
+            border-color: #444; /* Slightly darker border on hover */
+        }
+
         .abstract-text {
             display: none;
             font-size: 18px;
@@ -220,7 +229,7 @@
                 I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with
                 <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>. I work on topics related to political economy, labour, organization, and innovation.
             </p>
-            <p class="intro-text">You can contact me at: m.morando1 [at] lse.ac.uk</p>
+            <p class="intro-text">For more information, please see my CV.</p>
             <div class="research">Research In Progress</div>
             <div class="research-title">
                 <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Polarized Technologies</a>
