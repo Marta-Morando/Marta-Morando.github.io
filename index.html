@@ -126,13 +126,12 @@
         .abstract-container {
             margin-top: 12px;
         }
-               .abstract-button {
+         .abstract-button {
             display: inline-flex;
-            align-items: center;
-            justify-content: start;
+            align-items: center; /* Ensures vertical alignment of text and icon */
             padding: 4px 8px; /* Reduced padding for a smaller button */
             background-color: transparent;
-            font-size: 16px; /* Adjusted font size */
+            font-size: 16px; /* Adjust font size for the text */
             color: #666; /* Lighter gray for the text */
             cursor: pointer;
             border: none;
@@ -140,16 +139,16 @@
 
         .abstract-button span {
             display: inline-block;
-            width: 20px; /* Reduced size of the plus/minus icon */
-            height: 20px; /* Reduced size of the plus/minus icon */
+            width: 20px; /* Size of the plus/minus icon */
+            height: 20px;
             color: #666;
-            margin-left: 10px; /* Added spacing between the word and the icon */
+            margin-left: 8px; /* Proper spacing between the text and the icon */
             text-align: center;
-            line-height: 20px;
-            font-size: 14px; /* Adjusted font size of the icon */
+            line-height: 20px; /* Ensures the icon is vertically centered */
+            font-size: 14px; /* Icon font size */
             font-weight: bold;
             border: 1px solid #666; /* Border matches the text color */
-            border-radius: 4px;
+            border-radius: 0; /* Makes the border square */
             background-color: transparent;
         }
 
@@ -160,7 +159,6 @@
         .abstract-button span:hover {
             border-color: #444; /* Slightly darker border on hover */
         }
-
         .abstract-text {
             display: none;
             font-size: 18px;
