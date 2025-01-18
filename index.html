@@ -11,158 +11,155 @@
                  url('fonts/ProximaNova-Regular.woff') format('woff');
             font-weight: normal;
             font-style: normal;
-}
+        }
 
         body {
             font-family: 'Proxima Nova', Arial, sans-serif;
             margin: 20px;
-            font-size: 20px; /* Increased font size */
-            line-height: 1.8; /* Increased line height */
+            font-size: 20px;
+            line-height: 1.8;
             color: #444;
-            background-color: #ffffff; /* White background */
+            background-color: #ffffff;
         }
+
         h1 {
             font-family: 'Proxima Nova', Arial, sans-serif;
-            font-size: 40px; /* Increased font size */
+            font-size: 40px;
             color: #4a86e8;
-            margin-bottom: 10px;
+            text-align: center; /* Center the header */
+            margin-bottom: 20px; /* Add spacing below the header */
         }
+
         a {
             color: #4a86e8;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .container {
             display: flex;
-            flex-direction: row; 
-            align-items: stretch; /* Align items with equal height */
-            gap: 20px; 
+            flex-direction: row;
+            align-items: stretch;
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .left-section {
             width: 35%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
         }
+
         .photo-section img {
             width: 100%;
             height: auto;
-            max-width: 250px; /* Increased image size */
+            max-width: 250px;
         }
+
         .links {
             margin-top: 10px;
         }
+
         .links a {
             display: inline-flex;
             align-items: center;
             gap: 5px;
             margin: 5px 10px 5px 0;
-            font-size: 18px; /* Increased font size */
+            font-size: 18px;
         }
+
         .right-section {
             width: 65%;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Align text vertically */
+            justify-content: center;
         }
+
         .research {
             margin-top: 20px;
-            font-family: 'Proxima Nova', Arial, sans-serif;
-            font-size: 26px; /* Increased font size */
+            font-size: 26px;
             font-weight: bold;
             color: #4a86e8;
         }
-              .research-title a {
+
+        .research-title a {
             margin-top: 15px;
-            font-size: 20px; /* Increased font size */
-            color: #000; /* Black color for "Polarized Technologies" */
+            font-size: 20px;
+            color: #000;
             font-weight: bold;
-            text-decoration: underline; /* Underline the title */
+            text-decoration: underline;
         }
+
         .research-coauthors {
-            font-family: 'Proxima Nova', Arial, sans-serif;
-            font-size: 20px; /* Font size for coauthors */
-            color: #888; /* Light gray color for coauthors */
-            margin-left: 10px;
-            font-weight: normal; /* Remove bold style */
-        }
-
-.research-coauthors a {
-            color: #888; /* Set link color to match "with" */
-            text-decoration: none; /* Remove default underline */
-            border-bottom: 1px dotted #888; /* Add dotted effect */
-            margin: 0; /* Ensure no extra margin */
-            padding: 0; /* Remove any padding */
-            font-weight: normal; /* Remove bold style */
-
-}
-
-.research-coauthors a:hover {
-    border-bottom: none; /* No underline or dots on hover */
-    color: #888; /* Ensure hover color stays the same */
-}
-        .research-funding {
-            font-size: 18px; /* Increased font size */
+            font-size: 20px;
             color: #888;
-            font-family: 'Proxima Nova', Arial, sans-serif;
+            margin-left: 10px;
+            font-weight: normal;
         }
+
         .abstract-container {
             margin-top: 12px;
         }
+
         .abstract-button {
-            display: inline-flex; /* Make the button inline, like text */
+            display: inline-flex;
             align-items: center;
             justify-content: start;
-            padding: 0; /* Remove extra padding */
-            background-color: transparent; /* Remove background */
-            font-size: inherit; /* Inherit font size from the surrounding text */
-            color: inherit; /* Inherit text color */
+            padding: 0;
+            background-color: transparent;
+            font-size: inherit;
+            color: inherit;
             cursor: pointer;
-            border: none; /* Remove border */
-            font-family: inherit; /* Ensure it uses Proxima Nova */
+            border: none;
+            font-family: inherit;
         }
 
         .abstract-button span {
-            display: inline-block; /* Inline element for the +/- sign */
+            display: inline-block;
             width: 24px;
             height: 24px;
-            color: inherit; /* Match the text color */
-            margin-left: 8px; /* Slight margin to separate from the word "Abstract" */
+            color: inherit;
+            margin-left: 8px;
             text-align: center;
-            line-height: 24px; /* Center text vertically */
-            font-size: 16px; /* Match button font size */
+            line-height: 24px;
+            font-size: 16px;
             font-weight: bold;
-            border: 1px solid #444; /* Add a border around the +/- sign */
-            border-radius: 4px; /* Optional rounded corners */
-            background-color: transparent; /* Match the background */
+            border: 1px solid #444;
+            border-radius: 4px;
+            background-color: transparent;
         }
 
         .abstract-text {
             display: none;
-            font-size: 18px; /* Increased font size */
+            font-size: 18px;
             margin-top: 10px;
-            color: #4a4949; /* Updated text color */
+            color: #4a4949;
         }
-        /* Responsive design for smaller screens */
+
         @media (max-width: 768px) {
             .container {
-                flex-direction: column; 
+                flex-direction: column;
                 gap: 20px;
             }
+
             .left-section, .right-section {
                 width: 100%;
             }
+
             h1 {
                 font-size: 32px;
                 text-align: center;
             }
+
             .photo-section img {
                 margin: 0 auto;
             }
+
             .links {
                 text-align: center;
             }
@@ -183,42 +180,41 @@
     </script>
 </head>
 <body>
+    <h1>Marta Morando</h1>
     <div class="container">
         <!-- Left Section -->
         <div class="left-section">
-            <h1>Marta Morando</h1>
             <div class="photo-section">
                 <img src="IMG_4563.jpg" alt="Marta Morando">
             </div>
             <div class="links">
-                 <a href="https://www.dropbox.com/scl/fi/miko5m5xwgf9dlz74ztgu/cv_morando_marta.pdf?rlkey=8knb6w503mv2thl35ik4wxivq&st=853k355z&raw=1" target="_blank">CV</a>
+                <a href="https://www.dropbox.com/scl/fi/miko5m5xwgf9dlz74ztgu/cv_morando_marta.pdf?rlkey=8knb6w503mv2thl35ik4wxivq&st=853k355z&raw=1" target="_blank">CV</a>
                 <a href="https://x.com/MorandoMarta" target="_blank">X (Twitter)</a>
                 <a href="https://bsky.app/profile/martamorando.bsky.social" target="_blank">Bluesky</a>
-                </a>
             </div>
         </div>
         <!-- Right Section -->
         <div class="right-section">
             <p>
-                I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with 
-                <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>. I work on topics related to political economy, labour, organization, and innovation. 
+                I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with
+                <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>. I work on topics related to political economy, labour, organization, and innovation.
             </p>
             <p>You can contact me at: m.morando1 [at] lse.ac.uk</p>
             <div class="research">Research In Progress</div>
-<div class="research-title">
-    <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Polarized Technologies</a>
-    <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
-</div>
-<div class="research-funding">
-    Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE
-</div>
-           <div class="abstract-container">
-    <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button>
-    <div class="abstract-text" id="abstract-text">
-        We document that inventors patent and cite technologies aligned with the views of their political party. We link inventors to U.S. voter registration data and map politically polarized issues to technologies. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate change mitigation or women’s reproductive health, and one-third less likely to patent weapons. These findings hold across patent and inventor returns, organization characteristics, and within assignees. A similar pattern holds in the diffusion of innovation: Republicans and Democrats are on average 20% differently likely to cite polarized technologies.
-    </div>
-</div>
- <div class="research">Teaching</div>
+            <div class="research-title">
+                <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Polarized Technologies</a>
+                <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
+            </div>
+            <div class="research-funding">
+                Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE
+            </div>
+            <div class="abstract-container">
+                <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button>
+                <div class="abstract-text" id="abstract-text">
+                    We document that inventors patent and cite technologies aligned with the views of their political party...
+                </div>
+            </div>
+            <div class="research">Teaching</div>
         </div>
     </div>
 </body>
