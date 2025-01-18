@@ -26,8 +26,8 @@
             font-family: 'Proxima Nova', Arial, sans-serif;
             font-size: 40px;
             color: #4a86e8;
-            margin: 0; /* Remove default margin */
-            padding-bottom: 10px; /* Add spacing below the title */
+            margin: 0;
+            padding-bottom: 10px;
         }
 
         a {
@@ -42,7 +42,7 @@
         .container {
             display: flex;
             flex-direction: row;
-            align-items: flex-start; /* Align items at the top */
+            align-items: flex-start;
             gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
@@ -87,58 +87,12 @@
             color: #4a86e8;
         }
 
-        .research-title a {
-            margin-top: 15px;
-            font-size: 20px;
-            color: #000;
-            font-weight: bold;
-            text-decoration: underline;
+        .teaching-list {
+            margin-top: 20px;
         }
 
-        .research-coauthors {
-            font-size: 20px;
-            color: #888;
-            margin-left: 10px;
-            font-weight: normal;
-        }
-
-        .abstract-container {
-            margin-top: 12px;
-        }
-
-        .abstract-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: start;
-            padding: 0;
-            background-color: transparent;
-            font-size: inherit;
-            color: inherit;
-            cursor: pointer;
-            border: none;
-            font-family: inherit;
-        }
-
-        .abstract-button span {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            color: inherit;
-            margin-left: 8px;
-            text-align: center;
-            line-height: 24px;
-            font-size: 16px;
-            font-weight: bold;
-            border: 1px solid #444;
-            border-radius: 4px;
-            background-color: transparent;
-        }
-
-        .abstract-text {
-            display: none;
-            font-size: 18px;
-            margin-top: 10px;
-            color: #4a4949;
+        .teaching-list p {
+            margin: 5px 0;
         }
 
         @media (max-width: 768px) {
@@ -165,19 +119,6 @@
             }
         }
     </style>
-    <script>
-        function toggleAbstract() {
-            const abstractText = document.getElementById('abstract-text');
-            const buttonSpan = document.getElementById('button-icon');
-            if (abstractText.style.display === 'none' || !abstractText.style.display) {
-                abstractText.style.display = 'block';
-                buttonSpan.textContent = '-';
-            } else {
-                abstractText.style.display = 'none';
-                buttonSpan.textContent = '+';
-            }
-        }
-    </script>
 </head>
 <body>
     <div class="container">
@@ -193,6 +134,7 @@
                 <a href="https://bsky.app/profile/martamorando.bsky.social" target="_blank">Bluesky</a>
             </div>
         </div>
+
         <!-- Right Section -->
         <div class="right-section">
             <p>
@@ -200,21 +142,23 @@
                 <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>. I work on topics related to political economy, labour, organization, and innovation.
             </p>
             <p>You can contact me at: m.morando1 [at] lse.ac.uk</p>
+
             <div class="research">Research In Progress</div>
-            <div class="research-title">
+            <p>
                 <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Polarized Technologies</a>
-                <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
-            </div>
-            <div class="research-funding">
-                Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE
-            </div>
-            <div class="abstract-container">
-                <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button>
-                <div class="abstract-text" id="abstract-text">
-                    We document that inventors patent and cite technologies aligned with the views of their political party...
+                <span>(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
+            </p>
+            <p>Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE</p>
+
+            <div class="teaching">
+                <div class="research">Teaching</div>
+                <div class="teaching-list">
+                    <p>LSE Microeconomics I (EC1A3) for undergraduate students (2022)</p>
+                    <p>LSE Econometrics I (EC1C1) for undergraduate students (2023–2025)</p>
+                    <p>Winner of LSE Teaching Award (based on student ratings) (2023)</p>
+                    <p>LSE Quantitative Methods for Public Policy (PP402) for Executive Master in Public Policy students (2023)</p>
                 </div>
             </div>
-            <div class="research">Teaching</div>
         </div>
     </div>
 </body>
@@ -247,8 +191,8 @@
             font-family: 'Proxima Nova', Arial, sans-serif;
             font-size: 40px;
             color: #4a86e8;
-            margin: 0; /* Remove default margin */
-            padding-bottom: 10px; /* Add spacing below the title */
+            margin: 0;
+            padding-bottom: 10px;
         }
 
         a {
@@ -263,7 +207,7 @@
         .container {
             display: flex;
             flex-direction: row;
-            align-items: flex-start; /* Align items at the top */
+            align-items: flex-start;
             gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
@@ -308,58 +252,12 @@
             color: #4a86e8;
         }
 
-        .research-title a {
-            margin-top: 15px;
-            font-size: 20px;
-            color: #000;
-            font-weight: bold;
-            text-decoration: underline;
+        .teaching-list {
+            margin-top: 20px;
         }
 
-        .research-coauthors {
-            font-size: 20px;
-            color: #888;
-            margin-left: 10px;
-            font-weight: normal;
-        }
-
-        .abstract-container {
-            margin-top: 12px;
-        }
-
-        .abstract-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: start;
-            padding: 0;
-            background-color: transparent;
-            font-size: inherit;
-            color: inherit;
-            cursor: pointer;
-            border: none;
-            font-family: inherit;
-        }
-
-        .abstract-button span {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            color: inherit;
-            margin-left: 8px;
-            text-align: center;
-            line-height: 24px;
-            font-size: 16px;
-            font-weight: bold;
-            border: 1px solid #444;
-            border-radius: 4px;
-            background-color: transparent;
-        }
-
-        .abstract-text {
-            display: none;
-            font-size: 18px;
-            margin-top: 10px;
-            color: #4a4949;
+        .teaching-list p {
+            margin: 5px 0;
         }
 
         @media (max-width: 768px) {
@@ -386,19 +284,6 @@
             }
         }
     </style>
-    <script>
-        function toggleAbstract() {
-            const abstractText = document.getElementById('abstract-text');
-            const buttonSpan = document.getElementById('button-icon');
-            if (abstractText.style.display === 'none' || !abstractText.style.display) {
-                abstractText.style.display = 'block';
-                buttonSpan.textContent = '-';
-            } else {
-                abstractText.style.display = 'none';
-                buttonSpan.textContent = '+';
-            }
-        }
-    </script>
 </head>
 <body>
     <div class="container">
@@ -414,6 +299,7 @@
                 <a href="https://bsky.app/profile/martamorando.bsky.social" target="_blank">Bluesky</a>
             </div>
         </div>
+
         <!-- Right Section -->
         <div class="right-section">
             <p>
@@ -421,29 +307,23 @@
                 <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>. I work on topics related to political economy, labour, organization, and innovation.
             </p>
             <p>You can contact me at: m.morando1 [at] lse.ac.uk</p>
+
             <div class="research">Research In Progress</div>
-            <div class="research-title">
+            <p>
                 <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Polarized Technologies</a>
-                <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
-            </div>
-            <div class="research-funding">
-                Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE
-            </div>
-            <div class="abstract-container">
-                <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button>
-                <div class="abstract-text" id="abstract-text">
-                    We document that inventors patent and cite technologies aligned with the views of their political party...
+                <span>(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
+            </p>
+            <p>Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE</p>
+
+            <div class="teaching">
+                <div class="research">Teaching</div>
+                <div class="teaching-list">
+                    <p>LSE Microeconomics I (EC1A3) for undergraduate students (2022)</p>
+                    <p>LSE Econometrics I (EC1C1) for undergraduate students (2023–2025)</p>
+                    <p>Winner of LSE Teaching Award (based on student ratings) (2023)</p>
+                    <p>LSE Quantitative Methods for Public Policy (PP402) for Executive Master in Public Policy students (2023)</p>
                 </div>
             </div>
-            <div class="research">Teaching</div>
-             <div class="right-section">
-                <p>LSE Microeconomics I (EC1A3) for undergraduate students  (2022)
-
-LSE Econometrics I (EC1C1) for undergraduate students (2023-2025)
-
-Winner of LSE Teaching Award (based on student ratings) (2023)
-
-LSE Quantitative Methods for Public Policy (PP402) for Executive Master in Public Policy students (2023)
         </div>
     </div>
 </body>
