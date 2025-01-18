@@ -64,9 +64,11 @@
             align-items: center;
             gap: 10px;
         }
-        .links a svg {
+        .links a svg,
+        .links a img {
             width: 24px;
             height: 24px;
+            vertical-align: middle; /* Ensures all icons are perfectly aligned */
         }
         .icon-envelope {
             fill: #4a86e8; /* Light blue color */
@@ -74,11 +76,6 @@
         }
         .icon-envelope:hover {
             fill: grey; /* Change to grey on hover */
-        }
-        .links a img {
-            width: 24px;
-            height: 24px;
-            vertical-align: middle;
         }
         .right-section {
             width: 65%;
