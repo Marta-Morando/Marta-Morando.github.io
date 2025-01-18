@@ -64,10 +64,16 @@
             align-items: center;
             gap: 10px;
         }
-        .links a img {
+        .links a svg {
             width: 24px;
             height: 24px;
-            vertical-align: middle;
+        }
+        .icon-envelope {
+            fill: #4a86e8; /* Light blue color */
+            transition: fill 0.2s ease-in-out; /* Smooth transition for hover effect */
+        }
+        .icon-envelope:hover {
+            fill: grey; /* Change to grey on hover */
         }
         .right-section {
             width: 65%;
@@ -191,17 +197,19 @@
             <div class="photo-section">
                 <img src="pictures/profile.jpg" alt="Marta Morando">
             </div>
-        <div class="links">
-            <a href="mailto:m.morando1@lse.ac.uk">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 24px; height: 24px; vertical-align: middle;">
-            </a>
-            <a href="https://twitter.com/MorandoMarta" target="_blank">
-                <img src="pictures/twitter_logo.svg" alt="Twitter">
-            </a>
-            <a href="https://bsky.app/profile/martamorando.bsky.social" target="_blank">
-                <img src="pictures/bluesky_logo.svg" alt="Bluesky">
-            </a>
-        </div>
+            <div class="links">
+                <a href="mailto:m.morando1@lse.ac.uk">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-envelope">
+                        <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 11 4 6.01V6h16zm-16 2.5l7.76 4.88c.15.09.34.09.49 0L20 8.5V18H4V8.5z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/MorandoMarta" target="_blank">
+                    <img src="pictures/twitter_logo.svg" alt="Twitter">
+                </a>
+                <a href="https://bsky.app/profile/martamorando.bsky.social" target="_blank">
+                    <img src="pictures/bluesky_logo.svg" alt="Bluesky">
+                </a>
+            </div>
         </div>
         <!-- Right Section -->
         <div class="right-section">
