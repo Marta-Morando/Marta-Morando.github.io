@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Bellifemine</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #ffffff;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #4a5568;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #4a5568;
+            font-size: 22px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: rgb(181, 99, 101);
+        }
+
+        /* Main Content */
+        .main {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: 20px 10%;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .main .about {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 40px;
+        }
+
+        .main .about p {
+            font-size: 18px;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        .main .about a {
+            color: rgb(80, 136, 164);
+            text-decoration: none;
+        }
+
+        .main .about a:hover {
+            text-decoration: underline;
+            color: rgb(181, 99, 101);
+        }
+
+        .main .picture {
+            flex: 0 0 250px;
+            text-align: center;
+        }
+
+        .main .picture img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+	/* Styling for coauthors */
+        .coauthors {
+            color: #555;
+            font-style: italic;
+        }
+
+	.coauthors a {
+    	    text-decoration: none;
+    	    color: inherit;
+    	    font-style: italic; /* Ensures the text is italic */
+    	    font-weight: normal; /* Ensures the text is not bold */
+            
+        }
+
+        /* Modern Button for slides and data */
+        .details {
+            min-height: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .details a {
+            display: inline-block;
+            padding: 5px 12px;
+            margin-right: 8px;
+            color: rgb(80, 136, 164);
+            font-size: 14px;
+            text-decoration: none;
+            background-color: rgba(80, 136, 164, 0.15);
+            border-radius: 12px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            font-weight: 600;
+
+        }
+
+        .details a:hover {
+            background-color: rgba(80, 136, 164, 0.25);
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+
+	.bold-link {
+ 	   font-weight: bold;
+	}
+
+        /* Mobile Header */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 15px 5%;
+            }
+
+            header h1 {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 18px;
+            }
+        }
+
+        /* Sections */
+        section {
+            margin-top: 20px;
+            padding: 0 10%;
+        }
+
+        #research {
+            margin-top: 10px;
+        }
+
+        section h2 {
+            font-size: 26px;
+            color: #4a5568;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding-left: 15px;
+            margin-left: 0;
+        }
+
+        section ul li {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        section ul li a {
+            color: rgb(80, 136, 164);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section ul li a:hover {
+            color: rgb(181, 99, 101);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 10%;
+            background-color: #ffffff;
+            color: #777;
+            border-top: 1px solid #eaeaea;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main {
+                flex-wrap: wrap;
+            }
+
+            .main .about {
+                margin-right: 0;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .main .picture {
+                flex: 0 0 auto;
+                margin: 0 auto;
+            }
+        }
+
+    /* Responsive Design for Research Section */
+    @media (max-width: 768px) {
+        .details {
+            flex-wrap: wrap;
+        }
+
+        .details a {
+            margin-bottom: 10px; /* Adds space between buttons */
+        }
+
+        .details span {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px; /* Space above the text */
+            text-align: left; /* Align the text properly */
+        }
+    }
+
+	    /* Desktop-specific adjustment for reducing the gap */
+    @media (min-width: 769px) {
+        section#research {
+            margin-top: -30px; /* Adjust the value as needed */
+        }
+
+        .main {
+            margin-bottom: 0; /* Reduce the bottom margin of the main section */
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marco Bellifemine</h1>
+        <nav>
+            <a href="#research">Research</a>
+            <a href="cv/cv_bellifemine.pdf">CV</a>
+            <a href="#teaching">Teaching</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="about">
+            <p>
+                I am a fourth year PhD student in Economics at the London School of Economics.
+                My research interests are in macroeconomics.
+            </p>
+            <p>
+                You can find my CV <a href="cv/cv_bellifemine.pdf" target="_blank" class="bold-link">here</a> and you can contact me at <script>document.write('m.bellifemine' + '@' + 'lse.ac.uk');</script>
+            </p>
+        </div>
+        <div class="picture">
+            <img src="pictures/bellifemine_picture.jpg" alt="Marco Bellifemine">
+        </div>
+    </div>
+
+    <section id="research">
+        <h2>Research</h2>
+        <ul>
+            <li>
+                <a href="papers/rkc_draft.pdf" target="_blank">The Regional Keynesian Cross</a>, <span class="coauthors">with <a href="https://adriencouturier.com/" target="_blank">Adrien Couturier</a> and <a href="https://www.rustamjamilov.com" target="_blank">Rustam Jamilov</a></span>
+                <div class="details">
+		    <a href="papers/rkc_draft.pdf" target="_blank">Paper</a>
+                    <a href="https://regionalkeynesiancross.com" target="_blank">Data</a>
+                </div>
+            </li>
+            <li>
+    		<a href="papers/ezrkc_draft.pdf" target="_blank">Monetary Unions with Heterogeneous Fiscal Space</a>, 
+    	<span class="coauthors">with <a href="https://adriencouturier.com/" target="_blank">Adrien Couturier</a> and 
+    <a href="https://www.rustamjamilov.com" target="_blank">Rustam Jamilov</a></span>
+    		<div class="details">
+        	<a href="papers/ezrkc_draft.pdf" target="_blank">Paper</a>
+        	<a href="slides/ezrkc_slides.pdf" target="_blank">Slides</a>
+        	<span>Revise &amp; Resubmit, Journal of International Economics</span>
+    	</div>
+	</li>
+
+            <li>
+                <a href="papers/hbank_draft.pdf" target="_blank">HBANK: Monetary Policy with Heterogeneous Banks</a>, <span class="coauthors">with <a href="https://www.rustamjamilov.com" target="_blank">Rustam Jamilov</a> and <a href="https://sites.google.com/site/monacellitommaso/" target="_blank">Tommaso Monacelli</a></span>
+                <div class="details">
+		    <a href="papers/hbank_draft.pdf" target="_blank">Paper</a>
+                </div>
+	
+            </li>
+            <li>
+                <span style="color: rgb(80, 136, 164); font-weight: bold;">A Distributional Theory of Household Sentiment</span>, <span class="coauthors">with <a href="https://adriencouturier.com/" target="_blank">Adrien Couturier</a> and <a href="https://sites.google.com/view/mahdi-hosseini/home" target="_blank">Seyed Hosseini Maasoum</a></span>
+                <div class="details">
+                   <a href="#" style="pointer-events: none; opacity: 0.6;">Draft coming soon!</a> <a href="slides/deha_slides.pdf" target="_blank">Slides</a>  
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="teaching">
+        <h2>Teaching</h2>
+        <ul>
+            <li>TA for the PhD course <em>EC442 &mdash; Macroeconomics for MRes students</em>, LSE</li>
+            <li>TA for the undergraduate course <em>EC2B1 &mdash; Macroeconomics II</em>, LSE</li>
+            <li>TA for the undergraduate course <em>30459 &mdash; Macroeconomics and Economic Policy</em>, Bocconi</li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2024 Marco Bellifemine. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -185,6 +185,25 @@
             .links {
                 justify-content: center;
             }
+            .paper-button {
+            margin-left: 10px; /* Space between the coauthors text and the button */
+            padding: 4px 10px; /* Adjust padding for a compact button */
+            background-color: #2b2b2b; /* Button background color */
+            border: none;
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer;
+        }
+
+        .paper-button a {
+            text-decoration: none;
+            color: #fff; /* Button text color */
+            font-size: 14px;
+        }
+
+        .paper-button:hover {
+            background-color: #444; /* Darker background on hover */
+        }
+
         }
     </style>
     <script>
@@ -227,13 +246,19 @@
         <div class="right-section">
             <p class="intro-text">
                 I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with
-                <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>. I work on topics related to political economy, labour, organization, and innovation.
+                <a href="https://sticerd.lse.ac.uk/" target="_blank" style="text-decoration: underline;">STICERD</a>. I work on topics related to political economy, labour, organization, and innovation.
             </p>
-            <p class="intro-text">You can click on my CV <a href="cv/cv_morando_marta.pdf" target="_blank">here</a>.</p>
+            <p class="intro-text">
+    You can click on my CV <a href="cv/cv_morando_marta.pdf" target="_blank" style="text-decoration: underline;">here</a>.
+</p>
+
             <div class="research">Research In Progress</div>
             <div class="research-title">
                 <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Polarized Technologies</a>
                 <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
+                <button class="paper-button">
+        <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Paper</a>
+    </button>
             </div>
             <div class="research-funding">
                 Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE
