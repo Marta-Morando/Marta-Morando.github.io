@@ -26,9 +26,10 @@
             font-size: 220%; /* Adjusted for better alignment with the image */
             color: #2b2b2b;
             margin-bottom: 10px;
-            text-align: center;
+            text-align: left;
             display: block; /* Ensures text takes the necessary space */
             vertical-align: middle; /* Aligns text with the image */
+             width: fit-content;
         }
         a {
             color: #2b2b2b;
@@ -50,15 +51,16 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
+            align-items: flex-start;
+            text-align: left;
         }
         .left-section h1 {
             margin: 0;
         }
         .photo-section img {
-            width: auto;  /* Maintain aspect ratio */
-            max-width: 220px; /* Adjusted to match the text width */
+            width: auto;
+            height: auto;
+            max-width: 250px;
         }
         .links {
             margin-top: 10px;
@@ -262,10 +264,10 @@
 
             <div class="research">Research In Progress</div>
             <div class="research-title">
-                <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank" style="color: #68B6EF;">Polarized Technologies</a>
+                <a href="papers/polarizedtech.pdf" target="_blank" style="color: #68B6EF;">Polarized Technologies</a>
                 <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
                 <button class="paper-button">
-                    <a href="https://www.dropbox.com/scl/fi/ehnsvmwcl8ldb4qb2i29q/polarized_technologies_draft.pdf?rlkey=bcrvo9m9k6bo132sdb1pchx24&raw=1" target="_blank">Paper</a>
+                    <a href="papers/polarizedtech.pdf" target="_blank">Paper</a>
                 </button>
             </div>
             <div class="research-funding">
