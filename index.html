@@ -27,7 +27,7 @@
             color: #2b2b2b;
             margin-bottom: 10px;
             text-align: left;
-            display: block; /* Ensures text takes the necessary space */
+            display:  inline-block; /* Ensures text takes the necessary space */
             vertical-align: middle; /* Aligns text with the image */
              width: fit-content;
         }
@@ -58,7 +58,7 @@
             margin: 0;
         }
         .photo-section img {
-            width: auto;
+            width: 100%;
             height: auto;
             max-width: 250px;
         }
@@ -198,6 +198,12 @@
         .paper-button:hover a {
             color: #fff;
         }
+        .paper-button:focus {
+            background-color: transparent;
+            color: #2b2b2b;
+            outline: none;
+        }
+
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -233,9 +239,9 @@
     </script>
 </head>
 <body>
-    <h1>Marta Morando</h1>
     <div class="container">
         <div class="left-section">
+                <h1>Marta Morando</h1>
             <div class="photo-section">
                 <img src="pictures/profile.jpg" alt="Marta Morando">
             </div>
