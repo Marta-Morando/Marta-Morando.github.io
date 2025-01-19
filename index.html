@@ -193,6 +193,7 @@
             font-size: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
+            outline: none;
         }
 
         .paper-button:hover {
@@ -206,7 +207,17 @@
             font-weight: normal;
             font-size: 12px;
         }
+        .paper-button:focus,
+        .paper-button:active {
+            background-color: transparent !important;
+            color: #8C8C8C !important;
+            outline: none; /* Prevents highlighting */
+            border-color: #8C8C8C !important;
+        }
 
+        .paper-button:visited {
+            color: inherit;
+        }
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -274,7 +285,7 @@
             <div class="research">Research In Progress</div>
             <div class="research-title">
                 <a href="papers/polarizedtech.pdf" target="_blank" style="color: #46a2da;">Polarized Technologies</a>
-                <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank" style="font-size: 16px;">Gaia Dossi</a>)</span>
+                <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank" style="font-size: 18px;">Gaia Dossi</a>)</span>
                 <button class="paper-button">
                     <a href="papers/polarizedtech.pdf" target="_blank">Paper</a>
                 </button>
@@ -289,17 +300,17 @@
                 </div>
             </div>
             <div class="research">Teaching</div>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/EC/2023_EC1A3.htm" target="_blank" style="text-decoration: underline;">Microeconomics I (EC1A3) for undergraduate students</a></p>
-            <p class="teaching-text">
-                Econometrics I (EC1C1) for undergraduate students
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/EC/2023_EC1A3.htm" target="_blank" style="text-decoration: underline;">Microeconomics I (EC1A3)</a> for undergraduate students</p>
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/EC/2022_EC1C1.htm" target="_blank" style="text-decoration: underline;">
+                Econometrics I (EC1C1)</a> for undergraduate students
                 <br>
                 <span style="font-size: 14px; color: #888;">Winner of LSE Teaching Award (based on student ratings)</span>
             </p>
-            <p class="teaching-text">
-                Quantitative Methods for Public Policy (PP402) for Executive Master in Public Policy students
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP402.htm" target="_blank" style="text-decoration: underline;">
+                Quantitative Methods for Public Policy (PP402)</a> for Executive Master in Public Policy students
             </p>
-            <p class="teaching-text">Introduction to Statistics (PP430E) for Executive Master of Public Administration and Policy students</p>
-            <p class="teaching-text">Introduction to Quantitative Methods (PP408) for Master of Public Administration students</p>
-            <p class="teaching-text">Coding and Mathematics Bootcamp (PP407) for Master in Data Science for Policy students</p>
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP430E.htm" target="_blank" style="text-decoration: underline;"> Introduction to Statistics (PP430E)</a>for Executive Master of Public Administration and Policy students</p>
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2024-2025/courseGuides/PP/2024_PP408.htm" target="_blank" style="text-decoration: underline;">Introduction to Quantitative Methods (PP408)</a> for Master of Public Administration students</p>
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/PP/2022_PP407.htm" target="_blank" style="text-decoration: underline;">Coding and Mathematics Bootcamp (PP407)</a> for Master in Data Science for Policy students</p>
         </div>
     </div>
