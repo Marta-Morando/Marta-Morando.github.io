@@ -194,6 +194,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             outline: none;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .paper-button:hover {
@@ -253,13 +254,6 @@
     </script>
 </head>
 <body>
-    document.querySelectorAll('.paper-button').forEach(button => {
-    button.addEventListener('click', function() {
-        setTimeout(() => {
-            this.blur();
-        }, 200);
-    });
-});
 
     <div class="container">
         <div class="left-section">
@@ -317,7 +311,7 @@
             <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP402.htm" target="_blank" style="text-decoration: underline;">
                 Quantitative Methods for Public Policy (PP402)</a> for Executive Master in Public Policy students
             </p>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP430E.htm" target="_blank" style="text-decoration: underline;"> Introduction to Statistics (PP430E)</a>for Executive Master of Public Administration and Policy students</p>
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP430E.htm" target="_blank" style="text-decoration: underline;"> Introduction to Statistics (PP430E)</a> for Executive Master of Public Administration and Policy students</p>
             <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2024-2025/courseGuides/PP/2024_PP408.htm" target="_blank" style="text-decoration: underline;">Introduction to Quantitative Methods (PP408)</a> for Master of Public Administration students</p>
             <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/PP/2022_PP407.htm" target="_blank" style="text-decoration: underline;">Coding and Mathematics Bootcamp (PP407)</a> for Master in Data Science for Policy students</p>
         </div>
