@@ -21,30 +21,34 @@
             color: #444;
             background-color: #ffffff;
         }
+
         h1 {
             font-family: 'Proxima Nova', Arial, sans-serif;
-            font-size: 220%; /* Adjusted for better alignment with the image */
+            font-size: 220%;
             color: #2b2b2b;
-            margin-bottom: 10px;
-            text-align: left;
-            width: fit-content;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
         }
+
         a {
             color: #2b2b2b;
             text-decoration: none;
             font-weight: normal;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .container {
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 40px;
+            flex-direction: column;
+            align-items: center;
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .left-section {
             width: 34%;
             display: flex;
@@ -52,49 +56,58 @@
             align-items: center;
             text-align: center;
         }
-        .left-section h1 {
-            margin: 0;
-        }
+
         .photo-section img {
             width: 100%;
             height: auto;
             max-width: 250px;
+            margin-top: 20px;
         }
+
         .links {
             margin-top: 10px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .links a svg,
         .links a img {
             width: 20px;
             height: 20px;
             vertical-align: middle;
         }
+
         .icon-envelope {
             fill: #68B6EF;
             transition: fill 0.2s ease-in-out;
         }
+
         .icon-envelope:hover {
             fill: grey;
         }
+
         .right-section {
             width: 66%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            margin-top: 20px;
         }
+
         .right-section p {
             margin-top: 5px;
             margin-bottom: 5px;
         }
+
         .intro-text {
             font-size: 22px;
         }
+
         .teaching-text {
             font-size: 16px;
         }
+
         .research {
             margin-top: 20px;
             margin-bottom: 20px;
@@ -103,6 +116,7 @@
             font-weight: bold;
             color: #2b2b2b;
         }
+
         .research-title a {
             margin-top: 12px;
             font-size: 20px;
@@ -110,24 +124,40 @@
             font-weight: bold;
             text-decoration: underline;
         }
+
         .research-coauthors {
             font-size: 20px;
             color: #888;
             margin-left: 10px;
             font-weight: normal;
         }
+
         .research-coauthors a {
             color: #888;
             text-decoration: none;
             border-bottom: 1px dotted #888;
             font-weight: normal;
         }
+
         .research-coauthors a:hover {
             border-bottom: none;
         }
+
+        .research-funding a {
+            font-size: 16px;
+            color: #666;
+            text-decoration: none !important;
+        }
+
+        .research-funding a:hover {
+            text-decoration: none !important;
+            border-bottom: none !important;
+        }
+
         .abstract-container {
             margin-top: 12px;
         }
+
         .abstract-button {
             display: inline-flex;
             align-items: center;
@@ -196,11 +226,12 @@
         .paper-button:hover a {
             color: #fff;
         }
+
         .paper-button:focus,
-            .paper-button:active {
-                background-color: transparent !important;
-                color: #2b2b2b !important;
-                outline: none;
+        .paper-button:active {
+            background-color: transparent !important;
+            color: #2b2b2b !important;
+            outline: none;
         }
 
         @media (max-width: 768px) {
@@ -211,12 +242,8 @@
             .left-section, .right-section {
                 width: 100%;
             }
-            h1 {
-                font-size: 32px;
-                text-align: center;
-            }
             .photo-section img {
-                margin: 0 auto;
+                margin: 20px auto;
             }
             .links {
                 justify-content: center;
@@ -237,18 +264,18 @@
         }
     </script>
     <script>
-    document.querySelectorAll('.paper-button').forEach(button => {
-        button.addEventListener('click', function() {
-            setTimeout(() => {
-                this.blur();
-            }, 200);
+        document.querySelectorAll('.paper-button').forEach(button => {
+            button.addEventListener('click', function() {
+                setTimeout(() => {
+                    this.blur();
+                }, 200);
+            });
         });
-    });
-</script>
+    </script>
 </head>
 <body>
-    <h1>Marta Morando</h1>
     <div class="container">
+        <h1>Marta Morando</h1>
         <div class="left-section">
             <div class="photo-section">
                 <img src="pictures/profile.jpg" alt="Marta Morando">
@@ -290,7 +317,7 @@
             <div class="abstract-container">
                 <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button>
                 <div class="abstract-text" id="abstract-text">
-                    We document that inventors patent and cite technologies aligned with the views of their political party. We link inventors to U.S. voter registration data and map politically polarized issues to technologies. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate change mitigation or women’s reproductive health, and one-third less likely to patent weapons. These findings hold across patent and inventor returns, organization characteristics, and within assignees. A similar pattern holds in the diffusion of innovation: Republicans and Democrats are on average 20% differently likely to cite polarized technologies.
+                    We document that inventors patent and cite technologies aligned with the views of their political party. We link inventors to U.S. voter registration data and map politically polarized issues to technologies. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate change mitigation or women's reproductive health, and one-third less likely to patent weapons. These findings hold across patent and inventor returns, organization characteristics, and within assignees. A similar pattern holds in the diffusion of innovation: Republicans and Democrats are on average 20% differently likely to cite polarized technologies.
                 </div>
             </div>
             <div class="research">Teaching</div>
