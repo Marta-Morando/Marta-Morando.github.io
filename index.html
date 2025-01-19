@@ -316,3 +316,14 @@
             <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/PP/2022_PP407.htm" target="_blank" style="text-decoration: underline;">Coding and Mathematics Bootcamp (PP407)</a> for Master in Data Science for Policy students</p>
         </div>
     </div>
+<script>
+    document.querySelectorAll('.paper-button').forEach(button => {
+        button.addEventListener('touchstart', function() {
+            setTimeout(() => {
+                this.style.backgroundColor = "transparent";
+                this.style.color = "#666";
+            }, 300);
+        });
+    });
+</script>
+</body>
