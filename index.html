@@ -23,6 +23,7 @@
         }
 
         h1 {
+            font-family: 'Proxima Nova', Arial, sans-serif;
             font-size: 220%;
             color: #2b2b2b;
             margin-bottom: 20px;
@@ -94,6 +95,11 @@
             justify-content: flex-start;
         }
 
+        .right-section p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
         .intro-text {
             font-size: 22px;
         }
@@ -105,12 +111,14 @@
         .research {
             margin-top: 20px;
             margin-bottom: 20px;
+            font-family: 'Proxima Nova', Arial, sans-serif;
             font-size: 26px;
             font-weight: bold;
             color: #2b2b2b;
         }
 
         .research-title a {
+            margin-top: 12px;
             font-size: 20px;
             color: #000;
             font-weight: bold;
@@ -128,28 +136,22 @@
             color: #888;
             text-decoration: none;
             border-bottom: 1px dotted #888;
+            font-weight: normal;
         }
 
         .research-coauthors a:hover {
             border-bottom: none;
         }
 
-        .paper-link {
-            margin-left: 15px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #2b2b2b;
-            text-decoration: none;
-            border: 1px solid #2b2b2b;
-            padding: 4px 12px;
-            border-radius: 4px;
-            transition: all 0.3s ease-in-out;
-            display: inline-block;
+        .research-funding a {
+            font-size: 16px;
+            color: #666;
+            text-decoration: none !important;
         }
 
-        .paper-link:hover {
-            background-color: #2b2b2b;
-            color: #fff;
+        .research-funding a:hover {
+            text-decoration: none !important;
+            border-bottom: none !important;
         }
 
         .abstract-container {
@@ -160,11 +162,13 @@
             display: inline-flex;
             align-items: center;
             padding: 0;
+            margin-top: 0;
             background-color: transparent;
             font-size: 16px;
             color: #666;
             cursor: pointer;
             border: none;
+            line-height: 1.5;
         }
 
         .abstract-button span {
@@ -178,13 +182,56 @@
             font-size: 14px;
             font-weight: bold;
             border: 1px solid #666;
+            border-radius: 0;
             background-color: transparent;
+        }
+
+        .abstract-button:hover {
+            color: #444;
+        }
+
+        .abstract-button span:hover {
+            border-color: #444;
         }
 
         .abstract-text {
             display: none;
             font-size: 18px;
+            margin-top: 10px;
             color: #888;
+        }
+
+        .paper-button {
+            margin-left: 10px;
+            padding: 4px 8px;
+            background-color: transparent;
+            color: #2b2b2b;
+            border: 1px solid #666;
+            font-size: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .paper-button:hover {
+            background-color: #2b2b2b;
+            color: #fff;
+        }
+
+        .paper-button a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: normal;
+        }
+
+        .paper-button:hover a {
+            color: #fff;
+        }
+
+        .paper-button:focus,
+        .paper-button:active {
+            background-color: transparent !important;
+            color: #2b2b2b !important;
+            outline: none;
         }
 
         @media (max-width: 768px) {
@@ -195,22 +242,47 @@
             .left-section, .right-section {
                 width: 100%;
             }
-            h1 {
-                text-align: center;
-            }
             .photo-section img {
                 margin: 20px auto;
             }
             .links {
                 justify-content: center;
             }
+            h1 {
+                text-align: center;
+            }
+            .left-section {
+                align-items: center;
+            }
         }
     </style>
+    <script>
+        function toggleAbstract() {
+            const abstractText = document.getElementById('abstract-text');
+            const buttonSpan = document.getElementById('button-icon');
+            if (abstractText.style.display === 'none' || !abstractText.style.display) {
+                abstractText.style.display = 'block';
+                buttonSpan.textContent = '-';
+            } else {
+                abstractText.style.display = 'none';
+                buttonSpan.textContent = '+';
+            }
+        }
+    </script>
+    <script>
+        document.querySelectorAll('.paper-button').forEach(button => {
+            button.addEventListener('click', function() {
+                setTimeout(() => {
+                    this.blur();
+                }, 200);
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>Marta Morando</h1>
     <div class="container">
         <div class="left-section">
+            <h1>Marta Morando</h1>
             <div class="photo-section">
                 <img src="pictures/profile.jpg" alt="Marta Morando">
             </div>
@@ -220,32 +292,53 @@
                         <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 11 4 6.01V6h16zm-16 2.5l7.76 4.88c.15.09.34.09.49 0L20 8.5V18H4V8.5z"/>
                     </svg>
                 </a>
+                <a href="https://twitter.com/MorandoMarta" target="_blank">
+                    <img src="pictures/twitter_logo.svg" alt="Twitter">
+                </a>
+                <a href="https://bsky.app/profile/martamorando.bsky.social" target="_blank">
+                    <img src="pictures/bluesky_logo.svg" alt="Bluesky">
+                </a>
             </div>
         </div>
-
         <div class="right-section">
             <p class="intro-text">
-                I am a PhD candidate in Economics at the London School of Economics.
+                I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with
+                <a href="https://sticerd.lse.ac.uk/" target="_blank" style="text-decoration: underline;color: #68B6EF;">STICERD</a>. I work on topics related to political economy, labour, organization, and innovation.
+            </p>
+            <p class="intro-text">
+                You can click on my CV <a href="cv/cv_morando_marta.pdf" target="_blank" style="text-decoration: underline;color: #68B6EF;">here</a>.
             </p>
 
             <div class="research">Research In Progress</div>
             <div class="research-title">
-                <a href="papers/polarizedtech.pdf" target="_blank">Polarized Technologies</a>
+                <a href="papers/polarizedtech.pdf" target="_blank" style="color: #68B6EF;">Polarized Technologies</a>
                 <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a>)</span>
-                <a href="papers/polarizedtech.pdf" class="paper-link" target="_blank">Paper</a>
+                <button class="paper-button">
+                    <a href="papers/polarizedtech.pdf" target="_blank">Paper</a>
+                </button>
             </div>
-
+            <div class="research-funding">
+                <a style="font-size: 16px;color: #666;"> Funding: STICERD, Hayek, and Phelan US Centre Grants at LSE</a>
+            </div>
+            <div class="abstract-container">
+                <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button>
+                <div class="abstract-text" id="abstract-text">
+                    We document that inventors patent and cite technologies aligned with the views of their political party. We link inventors to U.S. voter registration data and map politically polarized issues to technologies. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate change mitigation or women's reproductive health, and one-third less likely to patent weapons. These findings hold across patent and inventor returns, organization characteristics, and within assignees. A similar pattern holds in the diffusion of innovation: Republicans and Democrats are on average 20% differently likely to cite polarized technologies.
+                </div>
+            </div>
             <div class="research">Teaching</div>
             <p class="teaching-text">Microeconomics I (EC1A3) for undergraduate students</p>
             <p class="teaching-text">
                 Econometrics I (EC1C1) for undergraduate students
                 <br>
-                <span style="font-size: 14px; color: #888;">Winner of LSE Teaching Award</span>
+                <span style="font-size: 14px; color: #888;">Winner of LSE Teaching Award (based on student ratings)</span>
             </p>
-            <p class="teaching-text">Quantitative Methods for Public Policy (PP402)</p>
-            <p class="teaching-text">Introduction to Statistics (PP430E)</p>
-            <p class="teaching-text">Introduction to Quantitative Methods (PP408)</p>
-            <p class="teaching-text">Coding and Mathematics Bootcamp (PP407)</p>
+            <p class="teaching-text">
+                Quantitative Methods for Public Policy (PP402) for Executive Master in Public Policy students
+            </p>
+            <p class="teaching-text">Introduction to Statistics (PP430E) for Executive Master of Public Administration and Policy students</p>
+            <p class="teaching-text">Introduction to Quantitative Methods (PP408) for Master of Public Administration students</p>
+            <p class="teaching-text">Coding and Mathematics Bootcamp (PP407) for Master in Data Science for Policy students</p>
         </div>
     </div>
 </body>
