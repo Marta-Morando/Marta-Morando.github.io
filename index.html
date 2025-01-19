@@ -198,10 +198,11 @@
         .paper-button:hover a {
             color: #fff;
         }
-        .paper-button:focus {
-            background-color: transparent;
-            color: #2b2b2b;
-            outline: none;
+        .paper-button:focus,
+            .paper-button:active {
+                background-color: transparent !important;
+                color: #2b2b2b !important;
+                outline: none;
         }
 
         @media (max-width: 768px) {
@@ -237,6 +238,15 @@
             }
         }
     </script>
+    <script>
+    document.querySelectorAll('.paper-button').forEach(button => {
+        button.addEventListener('click', function() {
+            setTimeout(() => {
+                this.blur();
+            }, 200);
+        });
+    });
+</script>
 </head>
 <body>
     <h1>Marta Morando</h1>
