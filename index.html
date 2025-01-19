@@ -253,6 +253,14 @@
     </script>
 </head>
 <body>
+    document.querySelectorAll('.paper-button').forEach(button => {
+    button.addEventListener('click', function() {
+        setTimeout(() => {
+            this.blur();
+        }, 200);
+    });
+});
+
     <div class="container">
         <div class="left-section">
                 <h1>Marta Morando</h1>
