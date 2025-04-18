@@ -226,6 +226,9 @@
         .paper-button:visited {
             color: inherit;
         }
+        .button-row button + button {
+          margin-left: 10px;
+        }
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -319,7 +322,8 @@
             <div class="abstract-container">
                 <div class="button-container">
                 <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button>
-                  <button class="paper-button"> <a href="papers/polarizedtech.pdf" target="_blank">Paper</a>        </button>
+                  <button class="paper-button"> <a href="papers/polarizedtech.pdf" target="_blank">paper</a></button>
+                   <button class="paper-button"><a href="slides/slides_polarizedtech.pdf" target="_blank">slides</a> </button>
     </div>
 
                 <div class="abstract-text" id="abstract-text">
