@@ -112,7 +112,9 @@
              padding-bottom: 5px;
         }
         .research-title a {
-            margin-top: 12px;
+            /* margin-top: 12px; */
+            margin-top: 0px;
+            display: inline-block;
             font-family: 'Proxima Nova', Arial, sans-serif;
             font-size: 22px;
             color: #6199E6;
@@ -126,6 +128,8 @@
             color: #8C8C8C;
             margin-left: 10px;
             font-weight: normal;
+            display: inline-block;
+            vertical-align: bottom;
         }
         .research-coauthors a {
             color: #8C8C8C;
@@ -133,6 +137,8 @@
             border-bottom: 1px dotted #8C8C8C;
             vertical-align: text-bottom;
             font-weight: normal;
+            padding-bottom: 5px;
+            display: inline-block;
         }
         .research-coauthors a:hover {
             border-bottom: none;
@@ -230,6 +236,20 @@
         .button-row button + button {
           margin-left: 10px;
         }
+        .publication {
+          display: inline-flex;
+          align-items: flex-end;   /* aligns the bottom edge (where your border‑bottom sits) */
+          gap: 10px;               /* horizontal space between title & coauthors */
+        }
+        .research-title a,
+        .research-title a:hover,
+        .research-title a:focus,
+        .research-title a:active {
+          text-decoration: none;
+          outline: none;
+        }
+
+
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -310,8 +330,9 @@
             </p>
 
             <div class="research">Working Papers</div>
-            <div class="research-title">
-                <a href="papers/polarizedtech.pdf" target="_blank" style="color: #6199E6;">Polarized Technologies</a>
+            <div class="publication">
+            <span class="research-title">
+                <a href="papers/polarizedtech.pdf" target="_blank" style="color: #6199E6;">Polarized Technologies</a></span>
                 <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank" style="font-size: 18px;">Gaia Dossi</a>)</span>
                 <!-- <button class="paper-button">
                     <a href="papers/polarizedtech.pdf" target="_blank">Paper</a>
