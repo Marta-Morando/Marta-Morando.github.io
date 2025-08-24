@@ -187,11 +187,50 @@
             color: #5e5d5d;
             max-width: 70ch;
         }
+        function copyBibTeX(citationKey) {
+        const citations = {
+        'dossimorando_2025': `@article{dossimorando_2025,
+        author = {Gaia Dossi and Marta Morando},
+        title = {Polarized Technologies},
+        journal = {CEP Discussion Papers},
+        year = {2025},
+        month={August},
+        number={2116}
+        }`,
+        'morando_2024': `@article{morando_2024,
+        author = {Marta Morando},
+        title = {Another Paper Title},
+        journal = {Journal Name},
+        year = {2024},
+        month={June},
+        number={1234}
+        }`,
+            // Add more citations as needed
+        };
+        const bibtex = citations[citationKey];
+        if (!bibtex) {
+            alert('Citation not found!');
+            return;
+        }
+
+        navigator.clipboard.writeText(bibtex).then(function() {
+            alert('BibTeX citation copied to clipboard!');
+        }).catch(function(err) {
+            const textArea = document.createElement('textarea');
+            textArea.value = bibtex;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            alert('BibTeX citation copied to clipboard!');
+        });
+    }
         .button-container {
             display: flex;
             align-items: center; /* Ensures vertical alignment */
             gap: 10px; /* Space between the buttons */
         }
+
            .paper-button {
             margin-left: 10px;
             padding: 4px 7px;
@@ -327,6 +366,8 @@
                 <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button>
                   <button class="paper-button"> <a href="papers/polarizedtech.pdf" target="_blank">paper</a></button>
                    <button class="paper-button"><a href="slides/slides_polarizedtech.pdf" target="_blank">slides</a> </button>
+                      <button class="paper-button" onclick="copyBibTeX('dossimorando_2025')">BibTeX</button>
+
     </div>
 
                 <div class="abstract-text" id="abstract-text">
