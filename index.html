@@ -271,32 +271,33 @@
         }
 function copyBibTeX(citationKey) {
     const citations = {
-    'dossimorando_2025': `@article{dossimorando_2025,
-      author = {Gaia Dossi and Marta Morando},
-      title = {Polarized Technologies},
-      journal = {CEP Discussion Papers},
-      year = {2025},
-      month={August},
-      number={2116}
-    }`,
-            'morando_2024': `@article{morando_2024,
-      author = {Marta Morando},
-      title = {Another Paper Title},
-      journal = {Journal Name},
-      year = {2024},
-      month={June},
-      number={1234}
-    }`,
-            // Add more citations as needed
-        };
+        'dossimorando_2025': `@article{dossimorando_2025,
+  author = {Gaia Dossi and Marta Morando},
+  title = {Polarized Technologies},
+  journal = {CEP Discussion Papers},
+  year = {2025},
+  month={August},
+  number={2116}
+}`,
+        'morando_2024': `@article{morando_2024,
+  author = {Marta Morando},
+  title = {Another Paper Title},
+  journal = {Journal Name},
+  year = {2024},
+  month={June},
+  number={1234}
+}`,
+        // Add more citations as needed
+    };
 
     const bibtex = citations[citationKey];
     if (!bibtex) {
         alert('Citation not found!');
         return;
     }
-    // Create a new window with the citation
-       const popup = window.open('', 'BibTeX', 'width=500,height=300,scrollbars=yes,resizable=yes');
+
+    // Open a simple new window with just the citation
+    const popup = window.open('', 'BibTeX', 'width=500,height=300,scrollbars=yes,resizable=yes');
     popup.document.write(`
         <html>
         <head>
