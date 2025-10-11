@@ -76,7 +76,7 @@
             vertical-align: middle;
         }
         .icon-envelope {
-            fill: #6199E6;
+            fill: #3C78D8;
             transition: fill 0.2s ease-in-out;
         }
         .icon-envelope:hover {
@@ -97,13 +97,13 @@
             margin-bottom: 5px;
         }
         .intro-text {
-            font-size: 22px;
+            font-size: 20px;
         }
         .teaching-text {
             font-size: 16px;
         }
         .research {
-            margin-top: 15px;
+            margin-top: 25px;
             margin-bottom: 15px;
             font-family: 'Proxima Nova', Arial, sans-serif;
             font-size: 26px;
@@ -115,15 +115,16 @@
         }
         .research-title a {
             margin-top: 12px;
+            margin-bottom: 20px;
             font-family: 'Proxima Nova', Arial, sans-serif;
-            font-size: 22px;
-            color: #6199E6;
-            font-weight: 400;
-            text-decoration: underline;
+            font-size: 20px;
+            color: #3C78D8;
+            font-weight: 600;
+            text-decoration: none;
         }
         .research-coauthors {
             font-size: 16px;
-            color: #8C8C8C;
+            color: #4A4A4A;
             margin-left: 10px;
             font-weight: normal;
         }
@@ -351,17 +352,17 @@ function copyBibTeX(citationKey) {
         <div class="right-section">
             <p class="intro-text">
                 I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with
-                <a href="https://sticerd.lse.ac.uk/" target="_blank" style="text-decoration: underline;color: #6199E6;">STICERD</a> and
-                the Programme on <a href="https://sticerd.lse.ac.uk/cohesive-capitalism/" target="_blank" style="text-decoration: underline;color: #6199E6;">Cohesive Capitalism</a>.
-                 </p> <p class="intro-text">  I work on topics related to political economy and labour economics.</p>
+                <a href="https://sticerd.lse.ac.uk/" target="_blank" style="text-decoration: underline;color: #3C78D8;">STICERD</a>.
+                 </p> <p class="intro-text">  My research interests are in political economy at the intersection with labour and development economics. </p>
+            </p> <p class="intro-text"> I study how interactions between the state and external actors shape public sector effectiveness, and how values influences people’s choices in the labour market.</p>
             </p>
             <p class="intro-text">
-                You can find my CV <a href="cv/cv_morando_marta.pdf" target="_blank" style="text-decoration: underline;color: #6199E6;">here</a>.
+                You can find my CV <a href="cv/cv_morando_marta.pdf" target="_blank" style="text-decoration: underline;color: #3C78D8;">here</a>.
             </p>
 
             <div class="research">Working Papers</div>
             <div class="research-title">
-                <a href="papers/polarizedtech.pdf" target="_blank" style="color: #6199E6;">Polarized Technologies</a>
+                <a href="papers/polarizedtech.pdf" target="_blank" style="color: #3C78D8;">Polarized Technologies</a>
                 <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank" style="font-size: 18px;">Gaia Dossi</a>)</span>
                 <!-- <button class="paper-button">
                     <a href="papers/polarizedtech.pdf" target="_blank">Paper</a>
@@ -387,27 +388,57 @@ function copyBibTeX(citationKey) {
             </div>
                         <div class="research">Work In Progress</div>
              <div class="research-title">
-                <a target="_blank" style="color: #6199E6;">Causes and Consequences of Site Selection in Development Aid</a>
+                <a target="_blank" style="color: #3C78D8;">The Geography of Development Programs and Its Organizational Origins</a>
                 <span class="research-coauthors">(with <a href="https://sites.google.com/view/eddyzou/home" target="_blank"
                     style="font-size: 18px;">Eddy Zou</a> and <a href="https://www.lse.ac.uk/economics/people/research-students/Beyza-Gulmezoglu" target="_blank"
                     style="font-size: 18px;">Beyza Gulmezoglu)</a> </span>
+                     <div class="research-title">
+                <a target="_blank" style="color: #3C78D8;">The Cost of Identity: Theory and Experimental Evidence from the Energy Sector</a>
+                <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank"
+                    style="font-size: 18px;">Gaia Dossi</a> and <a href="https://www.anderson.ucla.edu/degrees/phd-program/areas-of-study/global-economics-and-management/meet-the-students/Sveva-Manfredi" target="_blank"
+                    style="font-size: 18px;">Sveva Manfredi)</a> </span>
+                     <div class="research-funding">
+                 <a style="font-size: 16px;color: #8C8C8C;">Funding: STICERD Grant at LSE</a>
+            </div>
+                     <div class="abstract-container">
+                <div class="button-container">
+                <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button> </div>
+                 <div class="abstract-text" id="abstract-text">
+                    How does identity affect occupational choice? We study this question in the energy
+labor market, as oil and gas firms play a fundamental role in the green transition. We
+design and administer a survey experiment to job seekers entering the labor market for
+the first time. We find that individuals assign positive amenity value to working for a
+company whose core business aligns with their environmental identity and disamenity
+value to those that conflict with it. Respondents with green identities are willing to
+forgo 20% of their salary to work in a renewable energy firm rather than a generic
+energy company, and require a 15% wage premium to accept a job in an oil and gas
+firm. This pattern also holds when individuals apply to work in teams focusing on clean
+energy within these firms. To isolate social-image effects, we randomize whether job
+choices are private or publicly disclosed. Social image concerns significantly influence
+occupational choices, especially for jobs perceived as socially stigmatized. We develop
+a model of occupational choice in which individuals have private preferences over jobs
+and derive utility from aligning with social norms. In structural simulations, we study
+how the social environment shapes labor market inequality and the pace of the green
+transition
+                </div>
+
                 <!-- <button class="paper-button">
                     <a href="papers/polarizedtech.pdf" target="_blank">Paper</a>
                 </button> -->
             </div>
             <div class="research">Teaching</div>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/EC/2023_EC1A3.htm" target="_blank" style="text-decoration: underline;">Microeconomics I (EC1A3)</a> for undergraduate students</p>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/EC/2022_EC1C1.htm" target="_blank" style="text-decoration: underline;">
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/EC/2023_EC1A3.htm" target="_blank" style="color: #555555; font-weight: 600;">Microeconomics I (EC1A3)</a> for undergraduate students</p>
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/EC/2022_EC1C1.htm" target="_blank" style="color: #555555; font-weight: 600;">
                 Econometrics I (EC1C1)</a> for undergraduate students
                 <br>
-                <span style="font-size: 14px; color: #888;">Winner of LSE Teaching Award (based on student ratings)</span>
+                <span style="font-size: 14px; color: #555555; font-weight: 500;">Winner of LSE Teaching Award (based on student ratings)</span>
             </p>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP402.htm" target="_blank" style="text-decoration: underline;">
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP402.htm" target="_blank" style="color: #555555; font-weight: 600;">
                 Quantitative Methods for Public Policy (PP402)</a> for Executive Master in Public Policy students
             </p>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP430E.htm" target="_blank" style="text-decoration: underline;"> Introduction to Statistics (PP430E)</a> for Executive Master of Public Administration and Policy students</p>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2024-2025/courseGuides/PP/2024_PP408.htm" target="_blank" style="text-decoration: underline;">Introduction to Quantitative Methods (PP408)</a> for Master of Public Administration students</p>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/PP/2022_PP407.htm" target="_blank" style="text-decoration: underline;">Coding and Mathematics Bootcamp (PP407)</a> for Master in Data Science for Policy students</p>
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP430E.htm" target="_blank" style="color: #555555; font-weight: 600;"> Introduction to Statistics (PP430E)</a> for Executive Master of Public Administration and Policy students</p>
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2024-2025/courseGuides/PP/2024_PP408.htm" target="_blank" style="color: #555555; font-weight: 600;">Introduction to Quantitative Methods (PP408)</a> for Master of Public Administration students</p>
+            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/PP/2022_PP407.htm" target="_blank" style="color: #555555; font-weight: 600;">Coding and Mathematics Bootcamp (PP407)</a> for Master in Data Science for Policy students</p>
         </div>
     </div>
 <script>
