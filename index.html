@@ -23,13 +23,13 @@
         }
         h1 {
             font-family: 'Proxima Nova', Arial, sans-serif;
-            font-size: 28px; /* Adjusted for better alignment with the image */
+            font-size: 28px;
             font-weight: 700;
             color: #3b3b3b;
             margin-bottom: 10px;
             text-align: left;
-            display: inline-block; /* Ensures text takes the necessary space */
-            vertical-align: middle; /* Aligns text with the image */
+            display: inline-block;
+            vertical-align: middle;
         }
         a {
             color: #3b3b3b;
@@ -106,7 +106,7 @@
         .teaching-text a {
             color: #555555;
             font-weight: 600;
-            font-family: 'Proxima Nova', Arial, sans-serif; /* Add this */
+            font-family: 'Proxima Nova', Arial, sans-serif;
         }
         .research {
             margin-top: 30px;
@@ -119,9 +119,11 @@
              padding-bottom: 5px;
 
         }
+        .research-title {
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
         .research-title a {
-            margin-top: 50px;
-            margin-bottom: 30px;
             font-family: 'Proxima Nova', Arial, sans-serif;
             font-size: 20px;
             color: #4A86E8;
@@ -131,15 +133,15 @@
         .research-coauthors {
             font-size: 16px;
             color: #6B6B6B;
-            margin-left: 0;  /* Changed from 10px to 0 since it's now on its own line */
+            margin-left: 0;
             font-weight: normal;
-            display: block;  /* Add this line - puts coauthors on new line */
-            margin-top: 5px;  /* Add this line - adds space between title and coauthors */
+            display: block;
+            margin-top: 5px;
         }
         .research-coauthors a {
-            color: #6B6B6B;  /* Changed from #8C8C8C to match the darker gray */
+            color: #6B6B6B;
             text-decoration: none;
-            border-bottom: 1px dotted #6B6B6B;  /* Also update the border color */
+            border-bottom: 1px dotted #6B6B6B;
             font-weight: normal;
         }
         .research-coauthors a:hover {
@@ -149,7 +151,7 @@
             font-size: 16px;
             color: #8C8C8C;
             font-weight: normal;
-            margin-left: 0; /* Change from 15px to 0 */
+            margin-left: 0;
             display: block;
             margin-top: 5px;
         }
@@ -208,8 +210,8 @@
         }
         .button-container {
             display: flex;
-            align-items: center; /* Ensures vertical alignment */
-            gap: 10px; /* Space between the buttons */
+            align-items: center;
+            gap: 10px;
         }
 
            .paper-button {
@@ -242,7 +244,7 @@
         .paper-button:active {
             background-color: transparent !important;
             color: #8C8C8C !important;
-            outline: none; /* Prevents highlighting */
+            outline: none;
             border-color: #8C8C8C !important;
         }
 
@@ -273,6 +275,10 @@
             }
             .links {
                 justify-content: center;
+            }
+            .research-title {
+                margin-top: 45px;
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -306,7 +312,6 @@ function copyBibTeX(citationKey) {
   month={June},
   number={1234}
 }`,
-        // Add more citations as needed
     };
 
     const bibtex = citations[citationKey];
@@ -315,7 +320,6 @@ function copyBibTeX(citationKey) {
         return;
     }
 
-    // Open a simple new window with just the citation
     const popup = window.open('', 'BibTeX', 'width=500,height=300,scrollbars=yes,resizable=yes');
     popup.document.write(`
         <html>
@@ -337,14 +341,6 @@ function copyBibTeX(citationKey) {
 }
     </script>
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6Y02FCWKZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q6Y02FCWKZ');
-</script>
 <body>
 
     <div class="container">
@@ -372,7 +368,7 @@ function copyBibTeX(citationKey) {
                 I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with
                 <a href="https://sticerd.lse.ac.uk/" target="_blank" style="text-decoration: underline;color: #3C78D8;">STICERD</a>.
                  </p> <p class="intro-text">  I work primarily in political economy, often at the intersection with labour and development economics. </p>
-            </p> <p class="intro-text"> I study how interactions between the state and external actors shape public sector effectiveness, and how values influences people’s choices in the labour market.</p>
+            </p> <p class="intro-text"> I study how interactions between the state and external actors shape public sector effectiveness, and how values influences people's choices in the labour market.</p>
             </p>
             <p class="intro-text">
                 You can find my CV <a href="cv/cv_morando_marta.pdf" target="_blank" style="text-decoration: underline;color: #3C78D8;">here</a>.
@@ -382,9 +378,6 @@ function copyBibTeX(citationKey) {
             <div class="research-title">
                 <a href="papers/polarizedtech.pdf" target="_blank" style="color: #3C78D8;">Polarized Technologies</a>
                 <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank" style="font-size: 18px;">Gaia Dossi</a>)</span>
-                <!-- <button class="paper-button">
-                    <a href="papers/polarizedtech.pdf" target="_blank">Paper</a>
-                </button> -->
             </div>
             <div class="research-funding">
                  <a style="font-size: 16px;color: #8C8C8C;">Funding: STICERD, Hayek, and Phelan US Centre grants at LSE</a>
@@ -399,31 +392,29 @@ function copyBibTeX(citationKey) {
     </div>
 
                 <div class="abstract-text" id="abstract-text-1">
-                    We document that inventors patent and cite technologies aligned with the views of their political party. We link inventors to U.S. voter registration data and map politically polarized issues to technologies. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate change mitigation or women’s
-                    reproductive health and one-third less likely to patent weapons. This holds across economic returns and organization characteristics. Republicans and Democrats are also 20% differently likely to cite these technologies. These findings highlight the importance of inventors’ identity—specifically, their party affiliation—in shaping the content and
+                    We document that inventors patent and cite technologies aligned with the views of their political party. We link inventors to U.S. voter registration data and map politically polarized issues to technologies. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate change mitigation or women's
+                    reproductive health and one-third less likely to patent weapons. This holds across economic returns and organization characteristics. Republicans and Democrats are also 20% differently likely to cite these technologies. These findings highlight the importance of inventors' identity—specifically, their party affiliation—in shaping the content and
                     diffusion of their innovation.
                 </div>
             </div>
                         <div class="research">Work In Progress</div>
                         <div class="research-title">
                 <a target="_blank" style="color: #3C78D8;">Moving the Boundaries of the State: Evidence from Consulting in the Public Sector</a>
-                     <div class="research-title">
-
+                     </div>
              <div class="research-title">
                 <a target="_blank" style="color: #3C78D8;">The Geography of Development Programs and Its Organizational Origins</a>
                 <span class="research-coauthors">(with <a href="https://sites.google.com/view/eddyzou/home" target="_blank"
                     style="font-size: 18px;">Eddy Zou</a> and <a href="https://www.lse.ac.uk/economics/people/research-students/Beyza-Gulmezoglu" target="_blank"
                     style="font-size: 18px;">Beyza Gulmezoglu)</a> </span>
+                     </div>
                      <div class="research-title">
                 <a target="_blank" style="color: #3C78D8;">The Cost of Identity: Theory and Experimental Evidence from the Energy Sector</a>
                 <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank"
                     style="font-size: 18px;">Gaia Dossi</a> and <a href="https://www.anderson.ucla.edu/degrees/phd-program/areas-of-study/global-economics-and-management/meet-the-students/Sveva-Manfredi" target="_blank"
                     style="font-size: 18px;">Sveva Manfredi)</a>  </span>
+</div>
 <div class="research-funding"><a style="font-size: 16px; color: #8C8C8C; font-weight: normal;">Funding: STICERD grant at LSE</a>
             </div>
-                   <!--   <div class="research-funding">
-                 <a style="font-size: 16px;color: #8C8C8C;font-weight: normal;">Funding: STICERD Grant at LSE</a>
-            </div> -->
                      <div class="abstract-container">
                 <div class="button-container">
                 <button class="abstract-button" onclick="toggleAbstract('abstract-text-2', 'button-icon-2')">Abstract <span id="button-icon-2">+</span></button> </div>
@@ -443,12 +434,9 @@ occupational choices, especially for jobs perceived as socially stigmatized. We 
 a model of occupational choice in which individuals have private preferences over jobs
 and derive utility from aligning with social norms. In structural simulations, we study
 how the social environment shapes labor market inequality and the pace of the green
-transition
+transition.
                 </div>
 
-                <!-- <button class="paper-button">
-                    <a href="papers/polarizedtech.pdf" target="_blank">Paper</a>
-                </button> -->
             </div>
             <div class="research">Teaching</div>
             <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/EC/2023_EC1A3.htm" target="_blank" style="color: #555555; font-weight: 600;">Microeconomics I (EC1A3)</a> for undergraduate students</p>
@@ -476,3 +464,4 @@ transition
     });
 </script>
 </body>
+</html>
