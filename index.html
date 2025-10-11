@@ -259,17 +259,17 @@
         }
     </style>
     <script>
-        function toggleAbstract() {
-            const abstractText = document.getElementById('abstract-text');
-            const buttonSpan = document.getElementById('button-icon');
-            if (abstractText.style.display === 'none' || !abstractText.style.display) {
-                abstractText.style.display = 'block';
-                buttonSpan.textContent = '-';
-            } else {
-                abstractText.style.display = 'none';
-                buttonSpan.textContent = '+';
-            }
-        }
+        function toggleAbstract(abstractId, buttonId) {
+    const abstractText = document.getElementById(abstractId);
+    const buttonSpan = document.getElementById(buttonId);
+    if (abstractText.style.display === 'none' || !abstractText.style.display) {
+        abstractText.style.display = 'block';
+        buttonSpan.textContent = '-';
+    } else {
+        abstractText.style.display = 'none';
+        buttonSpan.textContent = '+';
+    }
+}
 function copyBibTeX(citationKey) {
     const citations = {
         'dossimorando_2025': `@article{dossimorando_2025,
@@ -373,14 +373,14 @@ function copyBibTeX(citationKey) {
             </div>
             <div class="abstract-container">
                 <div class="button-container">
-                <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button>
+                <button class="abstract-button" onclick="toggleAbstract('abstract-text-1', 'button-icon-1')">Abstract <span id="button-icon-1">+</span></button>
                   <button class="paper-button"> <a href="papers/polarizedtech.pdf" target="_blank">paper</a></button>
                    <button class="paper-button"><a href="slides/slides_polarizedtech.pdf" target="_blank">slides</a> </button>
                       <button class="paper-button" onclick="copyBibTeX('dossimorando_2025')">BibTeX</button>
 
     </div>
 
-                <div class="abstract-text" id="abstract-text">
+                <div class="abstract-text" id="abstract-text-1">
                     We document that inventors patent and cite technologies aligned with the views of their political party. We link inventors to U.S. voter registration data and map politically polarized issues to technologies. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate change mitigation or women’s
                     reproductive health and one-third less likely to patent weapons. This holds across economic returns and organization characteristics. Republicans and Democrats are also 20% differently likely to cite these technologies. These findings highlight the importance of inventors’ identity—specifically, their party affiliation—in shaping the content and
                     diffusion of their innovation.
@@ -402,8 +402,8 @@ function copyBibTeX(citationKey) {
             </div>
                      <div class="abstract-container">
                 <div class="button-container">
-                <button class="abstract-button" onclick="toggleAbstract()">Abstract <span id="button-icon">+</span></button> </div>
-                 <div class="abstract-text" id="abstract-text">
+                <button class="abstract-button" onclick="toggleAbstract('abstract-text-2', 'button-icon-2')">Abstract <span id="button-icon-2">+</span></button> </div>
+                 <div class="abstract-text" id="abstract-text-2">
                     How does identity affect occupational choice? We study this question in the energy
 labor market, as oil and gas firms play a fundamental role in the green transition. We
 design and administer a survey experiment to job seekers entering the labor market for
