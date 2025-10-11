@@ -124,9 +124,11 @@
         }
         .research-coauthors {
             font-size: 16px;
-            color: #6B6B6B;  /* Changed from #4A4A4A to a darker gray */
-            margin-left: 10px;
+            color: #6B6B6B;
+            margin-left: 0;  /* Changed from 10px to 0 since it's now on its own line */
             font-weight: normal;
+            display: block;  /* Add this line - puts coauthors on new line */
+            margin-top: 5px;  /* Add this line - adds space between title and coauthors */
         }
         .research-coauthors a {
             color: #6B6B6B;  /* Changed from #8C8C8C to match the darker gray */
