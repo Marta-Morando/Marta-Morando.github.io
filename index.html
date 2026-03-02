@@ -311,13 +311,11 @@
 }
 function copyBibTeX(citationKey) {
     const citations = {
-        'dossimorando_2025': `@article{dossimorando_2025,
-  author = {Gaia Dossi and Marta Morando},
-  title = {Polarized Technologies},
-  journal = {CEP Discussion Papers},
-  year = {2025},
-  month={August},
-  number={2116}
+        'dossimorando_2025': `@unpublished{dossimorando_2026,
+  author = {Dossi, Gaia and Morando, Marta},
+  title  = {Polarized Technologies},
+  year   = {2026},
+  note   = {Working paper},
 }`,
         'morando_2024': `@article{morando_2024,
   author = {Marta Morando},
@@ -409,15 +407,12 @@ function copyBibTeX(citationKey) {
                 <div class="button-container">
                 <button class="abstract-button" onclick="toggleAbstract('abstract-text-1', 'button-icon-1')">Abstract <span id="button-icon-1">+</span></button>
                   <button class="paper-button"> <a href="papers/polarizedtech.pdf" target="_blank">paper</a></button>
-                   <button class="paper-button"><a href="slides/slides_polarizedtech.pdf" target="_blank">slides</a> </button>
                       <button class="paper-button" onclick="copyBibTeX('dossimorando_2025')">BibTeX</button>
 
     </div>
 
                 <div class="abstract-text" id="abstract-text-1">
-                    We document that inventors patent and cite technologies aligned with the views of their political party. We link inventors to U.S. voter registration data and map politically polarized issues to technologies. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate change mitigation or women's
-                    reproductive health and one-third less likely to patent weapons. This holds across economic returns and organization characteristics. Republicans and Democrats are also 20% differently likely to cite these technologies. These findings highlight the importance of inventors' identity—specifically, their party affiliation—in shaping the content and
-                    diffusion of their innovation.
+                    We link U.S. patent and inventor records to individual voter register files and map politically polarized policy issues to related technologies. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate-change mitigation or women’s reproductive health, and one-third less likely to patent weapons and related technologies. These gaps are not explained by differences in inventive ability or by sorting across organizations or teams. Party-technology alignment has strengthened over the past two decades, a period of rising political polarization in U.S. society. Technology diffusion is also politically polarized: Democrats are more likely than Republicans to cite aligned technologies and less likely to cite misaligned ones. Together, these findings are consistent with political polarization and societal views being important drivers of the direction and diffusion of technological change and operating, at least in part, through inventors’ technology choices, with implications for innovation policy.
                 </div>
             </div>
                         <div class="research">Work In Progress</div>
