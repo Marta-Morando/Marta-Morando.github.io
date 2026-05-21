@@ -5,313 +5,630 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marta Morando</title>
     <style>
-        @font-face {
-            font-family: 'Proxima Nova';
-            src: url('fonts/ProximaNova-Regular.woff2') format('woff2'),
-                 url('fonts/ProximaNova-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
+        :root {
+            --text: #222222;
+            --muted: #666666;
+            --soft: #cfcfcf;
+            --line: #e8e8e8;
+            --paper: #fbfbf7;
+            --link: #3C78D8;
+            --pill: #f7f7f7;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Proxima Nova', Arial, sans-serif;
-            margin: 20px 2px 20px 10px;
-            font-size: 22px;
-            line-height: 1.6;
-            color: #444;
-            background-color: #ffffff;
-        }
-        h1 {
-            font-family: 'Proxima Nova', Arial, sans-serif;
-            font-size: 25px;
-            font-weight: 700;
-            color: #3b3b3b;
-            margin-bottom: 10px;
-            text-align: left;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        a {
-            color: #3b3b3b;
-            text-decoration: none;
-            font-weight: normal;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 40px;
-        }
-        .left-section {
-        width: 320px;
-        min-width: 320px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 0;
-        position: sticky;
-        top: 40px;
-        height: fit-content;
-    }
-        .left-section h1 {
             margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.48;
+            color: var(--text);
+            background: var(--paper);
         }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--link);
+        }
+
+        .page {
+            width: min(1010px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 54px 0 54px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 230px minmax(0, 1fr);
+            gap: 64px;
+            align-items: start;
+        }
+
+        .profile {
+            position: sticky;
+            top: 24px;
+        }
+
+        h1 {
+            margin: 0 0 22px;
+            font-size: 26px;
+            line-height: 1.05;
+            font-weight: 600;
+            letter-spacing: 0;
+            color: var(--text);
+        }
+
+        .photo-section {
+            margin: 0 0 22px;
+        }
+
         .photo-section img {
-    width: 100%;
-    height: auto;
-    max-width: 250px;
-    border-radius: 15px;  /* Add this line */
-}
-        .links {
-            margin-top: 10px;
+            display: block;
+            width: 205px;
+            max-width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .role {
+            margin: 0 0 2px;
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        .institution,
+        .address {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+            width: 205px;
+            margin: 0 0 14px;
+        }
+
+        .quick-links a,
+        .link-button,
+        .paper-button {
+            display: inline-flex;
+            align-items: center;
+            min-height: 25px;
+            padding: 4px 11px;
+            border: 1px solid #d4d4d4;
+            border-radius: 999px;
+            color: #444444;
+            background: var(--pill);
+            font-family: inherit;
+            font-size: 11px;
+            font-weight: normal;
+            line-height: 1;
+            cursor: pointer;
+            transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+        }
+
+        .quick-links a {
+            font-weight: 600;
+        }
+
+        .quick-links a:hover,
+        .link-button:hover,
+            .paper-button:hover {
+            background: #eeeeee;
+            border-color: #bdbdbd;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .social-icons {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
+            width: 205px;
+            margin: 0;
         }
-        .links a svg,
-        .links a img {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--muted);
         }
+
+        .social-icons svg,
+        .social-icons img {
+            width: 17px;
+            height: 17px;
+            display: block;
+            filter: grayscale(1) brightness(0.45);
+        }
+
         .icon-envelope {
-            fill: #3C78D8;
-            transition: fill 0.2s ease-in-out;
+            fill: currentColor;
         }
-        .icon-envelope:hover {
-            fill: grey;
-        }
-        .right-section {
-    width: 100%;
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 0;
-    margin-top: 15px;
-    padding-right: 0;
-    margin-left: 0;
-}
-        .right-section p {
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-        .intro-text {
-            font-size: 17px;
-        }
-        .teaching-text {
-            font-size: 13px;
-            font-family: 'Proxima Nova', Arial, sans-serif;
-        }
-        .teaching-text a {
-            color: #555555;
-            font-weight: 600;
-            font-family: 'Proxima Nova', Arial, sans-serif;
-        }
-        .research {
-            margin-top: 18px;
-            margin-bottom: 13px;
-            font-family: 'Proxima Nova', Arial, sans-serif;
-            font-size: 20px;
-            font-weight: bold;
-            color: #3b3b3b;
-             border-bottom: 1px solid #d3d3d3;
-             padding-bottom: 5px;
 
+        .icon-scholar {
+            width: 18px;
+            height: 18px;
         }
-        .research-title {
-            margin-top: 33px;
-            margin-bottom: 12px;
+
+        .mobile-break {
+            display: none;
         }
-        .research-title a {
-            font-family: 'Proxima Nova', Arial, sans-serif;
-            font-size: 17px;
-            color: #4A86E8;
-            font-weight: 600;
-            text-decoration: none;
+
+        .content {
+            max-width: 720px;
+            min-width: 0;
+            padding-top: 18px;
         }
-        .research-coauthors {
-            font-size: 11px;
-            color: #6B6B6B;
-            margin-left: 0;
-            font-weight: normal;
-            display: block;
-            margin-top: 5px;
-        }
-        .research-coauthors a {
-            color: #6B6B6B;
-            text-decoration: none;
-            border-bottom: 1px dotted #6B6B6B;
-            font-weight: normal;
-        }
-        .research-coauthors a:hover {
-            border-bottom: none;
-        }
-        .research-funding {
+
+        .intro {
+            margin: 0 0 36px;
+            padding-bottom: 0;
             font-size: 14px;
-            color: #8C8C8C;
-            font-weight: normal;
-            margin-left: 0;
-            display: block;
-            margin-top: 5px;
+            line-height: 1.85;
+            color: #3a3a3a;
+            font-weight: 400;
         }
 
-        .research-funding a {
-            font-size: 15px;
-            color: #8C8C8C;
-            font-weight: normal;
+        .intro p {
+            margin: 0 0 10px;
         }
-        .abstract-container {
-            margin-top: 2px;
-            margin-bottom: 10px;
+
+        .intro a,
+        .text-link {
+            color: var(--link);
+            border-bottom: 1px dotted currentColor;
         }
+
+        .section-title {
+            margin: 22px 0 18px;
+            padding: 0 0 5px;
+            border-bottom: 1px solid var(--line);
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .research-title {
+            margin: 0 0 7px;
+        }
+
+        .research-title > a,
+        .entry-title {
+            color: var(--link);
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .entry-title {
+            display: inline;
+            overflow-wrap: normal;
+            word-break: normal;
+            margin: 0;
+        }
+
+        .writing-title {
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        .title-line {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 0 0 2px;
+            min-width: 0;
+        }
+
+        .title-line .entry-title {
+            flex: 0 1 auto;
+            min-width: 0;
+        }
+
+        .jmp-title-line .entry-title {
+            max-width: none;
+        }
+
+        .research-coauthors {
+            display: block;
+            margin-top: 3px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .research-coauthors a {
+            color: var(--muted);
+            border-bottom: 1px dotted currentColor;
+            font-weight: 400;
+        }
+
+        .coauthor-link {
+            color: var(--muted);
+            border-bottom: 1px dotted currentColor;
+            font-weight: 400;
+        }
+
+        .research-coauthors a:hover {
+            color: #444444;
+            border-bottom-color: transparent;
+            text-decoration: none;
+        }
+
+        .coauthor-link:hover {
+            color: #444444;
+            border-bottom-color: transparent;
+            text-decoration: none;
+        }
+
+        .research-funding,
+        .entry-note {
+            margin: 2px 0 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .funders {
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .funders summary,
         .abstract-button {
             display: inline-flex;
             align-items: center;
-            padding: 0;
-            margin-top: 0;
-            background-color: transparent;
-            font-size: 14px;
-            color: #8C8C8C;
+            width: fit-content;
+            gap: 5px;
+            color: var(--muted);
+            font: inherit;
+            font-size: 13px;
             cursor: pointer;
-            border: none;
-            line-height: 1.8;
+            list-style: none;
+            min-height: 21px;
+            padding: 0 7px;
+            border: 1px solid var(--soft);
+            border-radius: 4px;
+            background: transparent;
+            line-height: 19px;
+            white-space: nowrap;
+            transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
         }
 
+        .funders summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .funders summary::before {
+            content: "";
+        }
+
+        .funders summary::after,
         .abstract-button span {
+            content: "+";
             display: inline-block;
-            width: 20px;
-            height: 20px;
-            color: #8C8C8C;
-            margin-left: 8px;
+            width: 8px;
+            color: inherit;
+            font-size: 13px;
+            font-weight: 650;
+            line-height: 1;
             text-align: center;
-            line-height: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            border: 1px solid #8C8C8C;
-            border-radius: 0;
-            background-color: transparent;
         }
 
+        .funders summary:hover,
         .abstract-button:hover {
-            color: #8C8C8C;
+            border-color: #8C8C8C;
+            color: #444444;
         }
 
-        .abstract-button span:hover {
+        .funders[open] summary::after {
+            content: "-";
+        }
+
+        .funders p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.35;
+        }
+
+        .funders[open] p {
+            max-width: 440px;
+            padding: 0;
+            border: 0;
+            background: transparent;
+        }
+
+        .entry {
+            padding: 0 0 18px;
+            margin: 0 0 18px;
+            min-width: 0;
+        }
+
+        #work-in-progress + .entry,
+        #work-in-progress + .entry + .entry,
+        #work-in-progress + .entry + .entry + .entry {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        #work-in-progress + .entry {
+            padding-top: 0;
+        }
+
+        .entry:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 11px;
+        }
+
+        .button-container.no-coauthors {
+            margin-top: 9px;
+        }
+
+        .paper-button {
+            min-height: 21px;
+            padding: 0 7px;
+            border: 1px solid var(--soft);
+            border-radius: 4px;
+            color: var(--muted);
+            background: transparent;
+            font-size: 13px;
+            line-height: 19px;
+        }
+
+        .paper-button:hover {
             border-color: #8C8C8C;
+            color: #444444;
+            background: transparent;
+        }
+
+        .paper-button a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .tag-button {
+            cursor: default;
+            color: #9a4f4f;
+            border-color: #ddb8b8;
+            background: #fff7f7;
+        }
+
+        .tag-button:hover {
+            background: #fff7f7;
+            color: #9a4f4f;
+            border-color: #ddb8b8;
         }
 
         .abstract-text {
             display: none;
-            font-size: 16px;
-            margin-top: 10px;
-            color: #5e5d5d;
-            max-width: 70ch;
-        }
-        .button-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            margin-top: 8px;
+            max-width: 68ch;
+            color: #555650;
+            font-size: 14px;
         }
 
-           .paper-button {
-            margin-left: 10px;
-            padding: 4px 7px;
-            background-color: transparent;
-            color: #8C8C8C;
-            border: 1px solid #8C8C8C;
-            font-size: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            outline: none;
-            -webkit-tap-highlight-color: transparent;
-            margin-top: 2px;
-
+        .teaching-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 13px;
+            font-family: inherit;
+            color: var(--muted);
         }
 
-        .paper-button:hover {
-            background-color: #8C8C8C;
-            color: #fff;
+        .teaching-list li {
+            margin: 0 0 6px;
         }
 
-        .paper-button a {
-            text-decoration: none;
-            color: #8C8C8C;
-            font-weight: normal;
-            font-size: 10px;
-        }
-        .paper-button:focus,
-        .paper-button:active {
-            background-color: transparent !important;
-            color: #8C8C8C !important;
-            outline: none;
-            border-color: #8C8C8C !important;
+        .teaching-list a {
+            color: var(--text);
+            font-weight: 600;
+            border-bottom: 1px dotted var(--soft);
         }
 
-        .paper-button:visited {
-            color: inherit;
+        .teaching-highlight {
+            color: var(--text);
         }
-        .button-row button + button {
-          margin-left: 10px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                gap: 20px;
-                padding: 10px 10px;
+
+        @media (max-width: 760px) {
+            body {
+                font-size: 14px;
+                line-height: 1.72;
             }
-            body{
-                line-height:1.6;
-                font-size: 11px;
-                margin: 10px 15px;
+
+            .page {
+                width: auto;
+                max-width: 640px;
+                margin-left: 24px;
+                margin-right: 24px;
+                padding-top: 34px;
+                overflow-x: hidden;
             }
-            .left-section, .right-section {
-                width: 100%;
+
+            .layout,
+            .content,
+            .intro,
+            .entry {
+                min-width: 0;
+            }
+
+            .intro p,
+            .entry-title,
+            .research-title > a {
+                overflow-wrap: break-word;
+            }
+
+            .layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .profile {
                 position: static;
-                margin-left: 0;
-                padding: 0 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
             }
+
+            .photo-section {
+                margin: 22px 0 28px;
+            }
+
+            .photo-section img {
+                width: min(200px, 72vw);
+                border-radius: 4px;
+            }
+
             h1 {
-                font-size: 19px;
+                font-size: 27px;
+                margin-bottom: 0;
                 text-align: center;
             }
-            .photo-section img {
-                    width: 100%;
-                margin: 0 auto;
-                border-radius: 15px;
-                    max-width: 250px;
 
-            }
-            .links {
+            .quick-links {
+                width: auto;
                 justify-content: center;
+                margin: 0 0 22px;
             }
-            .research-title {
-                margin-top: 45px;
+
+            .quick-links a,
+            .paper-button {
+                min-height: 24px;
+                padding: 3px 10px;
+                font-size: 11px;
+            }
+
+            .social-icons {
+                width: auto;
+                gap: 14px;
+                margin-bottom: 28px;
+            }
+
+            .mobile-break {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin: 0 auto;
+                color: var(--muted);
+                font-size: 12px;
+                line-height: 1;
+            }
+
+            .mobile-break::before,
+            .mobile-break::after {
+                content: "";
+                display: block;
+                flex: 1 1 0;
+                max-width: 150px;
+                height: 1px;
+                background: #a9a9a9;
+            }
+
+            .mobile-break::before {
+                margin-right: 16px;
+            }
+
+            .mobile-break::after {
+                margin-left: 16px;
+            }
+
+            .content {
+                width: calc(100vw - 72px);
+                max-width: calc(100vw - 72px);
+                padding-right: 0;
+            }
+
+            .intro {
+                margin: 0 0 28px;
+                font-size: 14px;
+                line-height: 1.75;
+            }
+
+            .section-title {
+                margin: 0 0 18px;
+                padding-bottom: 7px;
+                font-size: 13px;
+                letter-spacing: 0.09em;
+            }
+
+            .research-title > a,
+            .entry-title {
+                font-size: 15px;
+                line-height: 1.32;
+            }
+
+            .research-coauthors,
+            .entry-note,
+            .teaching-list,
+            .abstract-button,
+            .paper-button,
+            .funders summary {
+                font-size: 12px;
+            }
+
+            .entry {
                 margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+
+            .title-line {
+                display: flex;
+            }
+
+            .title-line .entry-title {
+                display: inline;
+                margin-bottom: 0;
+                max-width: 100%;
             }
         }
     </style>
     <script>
         function toggleAbstract(abstractId, buttonId) {
-    const abstractText = document.getElementById(abstractId);
-    const buttonSpan = document.getElementById(buttonId);
-    if (abstractText.style.display === 'none' || !abstractText.style.display) {
-        abstractText.style.display = 'block';
-        buttonSpan.textContent = '-';
-    } else {
-        abstractText.style.display = 'none';
-        buttonSpan.textContent = '+';
-    }
-}
-function copyBibTeX(citationKey) {
-    const citations = {
-        'dossimorando_2025': `@techreport{dossi_morando_2026,
+            const abstractText = document.getElementById(abstractId);
+            const buttonSpan = document.getElementById(buttonId);
+            if (abstractText.style.display === 'none' || !abstractText.style.display) {
+                abstractText.style.display = 'block';
+                buttonSpan.textContent = '-';
+            } else {
+                abstractText.style.display = 'none';
+                buttonSpan.textContent = '+';
+            }
+        }
+
+        function copyBibTeX(citationKey) {
+            const citations = {
+                'dossimorando_2025': `@techreport{dossi_morando_2026,
   title     = {Polarized Technologies},
   author    = {Dossi, Gaia and Morando, Marta},
   year      = {2026},
@@ -321,157 +638,155 @@ function copyBibTeX(citationKey) {
   institution = {Programme on Innovation and Diffusion (POID), London School of Economics and Political Science},
   address   = {London},
 }`,
-        'morando_2024': `@article{morando_2024,
-  author = {Marta Morando},
-  title = {Another Paper Title},
-  journal = {Journal Name},
-  year = {2024},
-  month={June},
-  number={1234}
-}`,
-    };
+            };
 
-    const bibtex = citations[citationKey];
-    if (!bibtex) {
-        alert('Citation not found!');
-        return;
-    }
+            const bibtex = citations[citationKey];
+            if (!bibtex) {
+                alert('Citation not found.');
+                return;
+            }
 
-    const popup = window.open('', 'BibTeX', 'width=500,height=300,scrollbars=yes,resizable=yes');
-    popup.document.write(`
-        <html>
-        <head>
-            <title>BibTeX Citation</title>
-            <style>
-                body {
-                    font-family: monospace;
-                    margin: 20px;
-                    white-space: pre-wrap;
-                    font-size: 11px;
-                }
-            </style>
-        </head>
-        <body>${bibtex}</body>
-        </html>
-    `);
-    popup.document.close();
-}
+            const popup = window.open('', 'BibTeX', 'width=500,height=300,scrollbars=yes,resizable=yes');
+            popup.document.write(`
+                <html>
+                <head>
+                    <title>BibTeX Citation</title>
+                    <style>
+                        body {
+                            font-family: monospace;
+                            margin: 20px;
+                            white-space: pre-wrap;
+                            font-size: 11px;
+                        }
+                    </style>
+                </head>
+                <body>${bibtex}</body>
+                </html>
+            `);
+            popup.document.close();
+        }
     </script>
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6Y02FCWKZ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q6Y02FCWKZ');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q6Y02FCWKZ');
 </script>
 <body>
-
-    <div class="container">
-        <div class="left-section">
-                <h1>Marta Morando</h1>
-            <div class="photo-section">
-                <img src="pictures/profile.jpg" alt="Marta Morando">
-            </div>
-            <div class="links">
-                <a href="mailto:m.morando1@lse.ac.uk">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-envelope">
-                        <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 11 4 6.01V6h16zm-16 2.5l7.76 4.88c.15.09.34.09.49 0L20 8.5V18H4V8.5z"/>
-                    </svg>
-                </a>
-                <a href="https://twitter.com/MorandoMarta" target="_blank">
-                    <img src="pictures/twitter_logo.svg" alt="Twitter">
-                </a>
-                <a href="https://bsky.app/profile/martamorando.bsky.social" target="_blank">
-                    <img src="pictures/bluesky_logo.svg" alt="Bluesky">
-                </a>
-            </div>
-        </div>
-        <div class="right-section">
-            <p class="intro-text">
-                I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with
-                <a href="https://sticerd.lse.ac.uk/" target="_blank" style="text-decoration: underline;color: #3C78D8;">STICERD</a>.
-                 </p> <p class="intro-text">  I work primarily in political economy, at its intersection with organisational, labour, and public economics. </p>
-            </p> <p class="intro-text"> I study how interactions between the state and external actors shape public sector effectiveness, and how values, identities, and norms are reflected in the labour market and in the direction of technological change.</p>
-            </p>
-            <p class="intro-text">
-                You can find my CV <a href="cv/cv_morando_marta.pdf" target="_blank" style="text-decoration: underline;color: #3C78D8;">here</a>.
-            </p>
-
-            <div class="research">Working Papers</div>
-            <div class="research-title">
-                <a href="papers/polarizedtech.pdf" target="_blank" style="color: #3C78D8;">Polarized Technologies</a>
-                <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank" style="font-size: 14px;">Gaia Dossi</a>)</span>
-            </div>
-            <div class="research-funding">
-                 <span style="font-size: 15px;color: #8C8C8C;"><b>Funding:</b> STICERD, Hayek, and Phelan US Centre grants</span>
-            </div>
-            <div class="abstract-container">
-                <div class="button-container">
-                <button class="abstract-button" onclick="toggleAbstract('abstract-text-1', 'button-icon-1')">Abstract <span id="button-icon-1">+</span></button>
-                  <button class="paper-button"> <a href="papers/polarizedtech.pdf" target="_blank">paper</a></button>
-                      <button class="paper-button" onclick="copyBibTeX('dossimorando_2025')">BibTeX</button>
-                      <button class="paper-button"> <a href="https://blogs.lse.ac.uk/usappblog/2026/03/26/polarization-is-not-a-myth-it-is-reflected-in-the-creation-and-spread-of-new-technologies/" target="_blank">LSE Blog</a></button>
-
-    </div>
-
-                <div class="abstract-text" id="abstract-text-1">
-                  We study whether, and how, societal views about which problems are most socially important or worth solving are reflected in the direction of technological progress. We map polarized issues in the U.S. public debate to related technologies and link inventor records to voter registers. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate-change mitigation or women’s reproductive health, and one-third less likely to patent weapons. These gaps are not explained by differences in inventive ability and persist within organizations. Party-technology alignment has strengthened over the past two decades, alongside rising polarization in U.S. society. This pattern also appears in subsequent innovation: inventors are more likely to build on aligned technologies and less on misaligned ones.  These findings suggest that societal views and their polarization are important drivers of technological change, operating in part through inventors’ technology choices, with implications for innovation policy.
-                </div>
-            </div>
-                        <div class="research">Work In Progress</div>
-                        <div class="research-title">
-                <a target="_blank" style="color: #3C78D8;">Consulting Contracts and The Organizational Economics of the State</a>
-                     </div>
-                     <div class="research-funding"><span style="font-size: 15px; color: #8C8C8C; font-weight: normal;"><b>Funding:</b> Google Cloud Research, STICERD, Programme on Cohesive Capitalism grants </span> </div>
-            <div class="research-title">
-                <a target="_blank" style="color: #3C78D8;">The Geography of Development Programs</a>
-                <span class="research-coauthors">(with <a href="https://www.lse.ac.uk/economics/people/research-students/Beyza-Gulmezoglu" target="_blank"
-                    style="font-size: 14px;">Beyza Gulmezoglu</a> and <a href="https://sites.google.com/view/eddyzou/home" target="_blank"
-                    style="font-size: 14px;">Eddy Zou)</a> </span>
-                     </div>
-                     <div class="research-title">
-                <a target="_blank" style="color: #3C78D8;">The Cost of Identity: Theory and Experimental Evidence from the Energy Sector</a>
-                <span class="research-coauthors">(with <a href="https://sites.google.com/view/gaiadossi" target="_blank"
-                    style="font-size: 14px;">Gaia Dossi</a> and <a href="https://matt-obrien.com/" target="_blank"
-                    style="font-size: 14px;">Matthew OBrien)</a>  </span>
-</div>
-<div class="research-funding"><span style="font-size: 15px; color: #8C8C8C; font-weight: normal;"><b>Funding:</b> STICERD, Global School of Suistainability grants</span>
-            </div>
-                     <div class="abstract-container">
-                <div class="button-container">
-                <button class="abstract-button" onclick="toggleAbstract('abstract-text-2', 'button-icon-2')">Abstract <span id="button-icon-2">+</span></button> </div>
-                 <div class="abstract-text" id="abstract-text-2">
-                   How do private and social identities affect occupational choice? We study this question in the energy labor market, where oil and gas firms play a fundamental role in the green transition. We design a novel survey experiment and administer it to first-time job seekers.
-We find that individuals assign positive amenity value to working for a company whose core business aligns with their environmental identity and disamenity value to those that conflict with it. Respondents with green identities are willing to forgo 20% of their salary to work in a renewable energy firm rather than a generic energy company, and require a 15% wage premium to accept a job in an oil and gas firm. This pattern also holds when individuals apply to work in teams focusing on clean energy within these firms. To isolate social-image effects, we randomize whether job choices are private or publicly disclosed. Social image concerns significantly influence occupational choices, especially for jobs perceived as socially stigmatized. We develop a model of occupational choice in which individuals have private preferences over jobs and derive utility from aligning with social norms. In structural simulations, we study how the social environment shapes the allocation of talent, productivity, and the pace of the green transition.
+    <main class="page">
+        <div class="layout">
+            <aside class="profile">
+                <div>
+                    <h1>Marta Morando</h1>
                 </div>
 
-            </div>
-            <div class="research">Teaching</div>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/EC/2023_EC1A3.htm" target="_blank" style="color: #555555; font-weight: 600;">Microeconomics I (EC1A3)</a> for undergraduate students</p>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/EC/2022_EC1C1.htm" target="_blank" style="color: #555555; font-weight: 600;">
-                Econometrics I (EC1C1)</a> for undergraduate students
-                <br>
-                <span style="font-size: 13px; color: #555555; font-weight: 600;">Winner of LSE Teaching Award (based on student ratings)</span>
-            </p>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP402.htm" target="_blank" style="color: #555555; font-weight: 600;">
-                Quantitative Methods for Public Policy (PP402)</a> for Executive Master in Public Policy students
-            </p>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP430E.htm" target="_blank" style="color: #555555; font-weight: 600;"> Introduction to Statistics (PP430E)</a> for Executive Master of Public Administration and Policy students</p>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2024-2025/courseGuides/PP/2024_PP408.htm" target="_blank" style="color: #555555; font-weight: 600;">Introduction to Quantitative Methods (PP408)</a> for Master of Public Administration students</p>
-            <p class="teaching-text"><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/PP/2022_PP407.htm" target="_blank" style="color: #555555; font-weight: 600;">Coding and Mathematics Bootcamp (PP407)</a> for Master in Data Science for Policy students</p>
+                <figure class="photo-section">
+                    <img src="pictures/profile.jpg" alt="Marta Morando">
+                </figure>
+
+                <div class="quick-links" aria-label="Main links">
+                    <a href="cv/cv_morando_marta.pdf" target="_blank">download CV</a>
+                    <a href="mailto:m.morando1@lse.ac.uk">email</a>
+                </div>
+
+                <div class="social-icons" aria-label="Social links">
+                    <a href="https://scholar.google.com/citations?user=-_zsfhMAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
+                        <svg class="icon-scholar" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-24L0 9.5l4.84 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.16 4.44L24 9.5 12 0Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/MorandoMarta" target="_blank" aria-label="Twitter">
+                        <img src="pictures/twitter_logo.svg" alt="">
+                    </a>
+                    <a href="https://bsky.app/profile/martamorando.bsky.social" target="_blank" aria-label="Bluesky">
+                        <img src="pictures/bluesky_logo.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="mobile-break" aria-hidden="true">◇</div>
+
+            </aside>
+
+            <section class="content">
+                <section class="intro" id="about">
+                    <p>I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>.</p>
+                    <p>I work primarily in political economy, at its intersection with organisational, labour, and public economics.</p>
+                    <p>I study how interactions between the state and external actors shape public sector effectiveness, and how values, identities, and norms are reflected in the labour market and in the direction of technological change.</p>
+                </section>
+
+                <h2 class="section-title" id="working-papers">Working Papers</h2>
+                <article class="entry">
+                    <div class="research-title">
+                        <a href="papers/polarizedtech.pdf" target="_blank">Polarized Technologies</a>
+                        <span class="research-coauthors">with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a></span>
+                    </div>
+                    <div class="button-container">
+                        <button class="abstract-button" onclick="toggleAbstract('abstract-text-1', 'button-icon-1')">abstract <span id="button-icon-1">+</span></button>
+                        <a class="paper-button" href="papers/polarizedtech.pdf" target="_blank">paper</a>
+                        <button class="paper-button" onclick="copyBibTeX('dossimorando_2025')">bibtex</button>
+                        <details class="funders">
+                            <summary>funders</summary>
+                            <p>STICERD and Phelan US Centre</p>
+                        </details>
+                    </div>
+                    <div class="abstract-text" id="abstract-text-1">
+                        We study whether, and how, societal views about which problems are most socially important or worth solving are reflected in the direction of technological progress. We map polarized issues in the U.S. public debate to related technologies and link inventor records to voter registers. Compared to Republicans, Democrats are one-third more likely to patent technologies addressing climate-change mitigation or women's reproductive health, and one-third less likely to patent weapons. These gaps are not explained by differences in inventive ability and persist within organizations. Party-technology alignment has strengthened over the past two decades, alongside rising polarization in U.S. society. This pattern also appears in subsequent innovation: inventors are more likely to build on aligned technologies and less on misaligned ones. These findings suggest that societal views and their polarization are important drivers of technological change, operating in part through inventors' technology choices, with implications for innovation policy.
+                    </div>
+                </article>
+
+                <h2 class="section-title" id="work-in-progress">Work in Progress</h2>
+                <article class="entry">
+                    <div class="title-line jmp-title-line">
+                        <p class="entry-title">Consulting Contracts and The Organizational Economics of the State</p>
+                        <span class="paper-button tag-button">job market paper</span>
+                    </div>
+                    <div class="button-container no-coauthors">
+                        <details class="funders">
+                            <summary>funders</summary>
+                            <p>Google Cloud Research and STICERD</p>
+                        </details>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <p class="entry-title">The Geography of Development Programs</p>
+                    <span class="research-coauthors">with <a href="https://www.lse.ac.uk/economics/people/research-students/Beyza-Gulmezoglu" target="_blank">Beyza Gulmezoglu</a> and <a href="https://sites.google.com/view/eddyzou/home" target="_blank">Eddy Zou</a></span>
+                </article>
+
+                <article class="entry">
+                    <p class="entry-title">The Cost of Identity: Theory and Experimental Evidence from the Energy Sector</p>
+                    <span class="research-coauthors">with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a> and <a href="https://matt-obrien.com/" target="_blank">Matthew O'Brien</a></span>
+                    <div class="button-container">
+                        <button class="abstract-button" onclick="toggleAbstract('abstract-text-2', 'button-icon-2')">abstract <span id="button-icon-2">+</span></button>
+                        <details class="funders">
+                            <summary>funders</summary>
+                            <p>STICERD and Global School of Sustainability</p>
+                        </details>
+                    </div>
+                    <div class="abstract-text" id="abstract-text-2">
+                        How do private and social identities affect occupational choice? We study this question in the energy labor market, where oil and gas firms play a fundamental role in the green transition. We design a novel survey experiment and administer it to first-time job seekers. We find that individuals assign positive amenity value to working for a company whose core business aligns with their environmental identity and disamenity value to those that conflict with it. Respondents with green identities are willing to forgo 20% of their salary to work in a renewable energy firm rather than a generic energy company, and require a 15% wage premium to accept a job in an oil and gas firm. This pattern also holds when individuals apply to work in teams focusing on clean energy within these firms. To isolate social-image effects, we randomize whether job choices are private or publicly disclosed. Social image concerns significantly influence occupational choices, especially for jobs perceived as socially stigmatized. We develop a model of occupational choice in which individuals have private preferences over jobs and derive utility from aligning with social norms. In structural simulations, we study how the social environment shapes the allocation of talent, productivity, and the pace of the green transition.
+                    </div>
+                </article>
+
+                <h2 class="section-title" id="other-writing">Other Writing</h2>
+                <article class="entry">
+                    <a class="entry-title writing-title" href="https://blogs.lse.ac.uk/usappblog/2026/03/26/polarization-is-not-a-myth-it-is-reflected-in-the-creation-and-spread-of-new-technologies/" target="_blank">"Polarization is Not a Myth: It Is Reflected in the Creation and Diffusion of New Technologies"</a>
+                    <p class="entry-note">(with <a class="coauthor-link" href="https://sites.google.com/view/gaiadossi" target="_blank">G. Dossi</a>), LSE United States Politics and Policy Blog, March 2026</p>
+                </article>
+
+                <h2 class="section-title" id="teaching">Teaching</h2>
+                <ul class="teaching-list">
+                    <li><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/EC/2023_EC1A3.htm" target="_blank">Microeconomics I (EC1A3)</a> for undergraduate students</li>
+                    <li><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/EC/2022_EC1C1.htm" target="_blank">Econometrics I (EC1C1)</a> for undergraduate students. <span class="teaching-highlight">Winner of LSE Teaching Award based on student ratings.</span></li>
+                    <li><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP402.htm" target="_blank">Quantitative Methods for Public Policy (PP402)</a> for Executive Master in Public Policy students</li>
+                    <li><a href="https://www.lse.ac.uk/resources/calendar2023-2024/courseGuides/PP/2023_PP430E.htm" target="_blank">Introduction to Statistics (PP430E)</a> for Executive Master of Public Administration and Policy students</li>
+                    <li><a href="https://www.lse.ac.uk/resources/calendar2024-2025/courseGuides/PP/2024_PP408.htm" target="_blank">Introduction to Quantitative Methods (PP408)</a> for Master of Public Administration students</li>
+                    <li><a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/PP/2022_PP407.htm" target="_blank">Coding and Mathematics Bootcamp (PP407)</a> for Master in Data Science for Policy students</li>
+                </ul>
+            </section>
         </div>
-    </div>
-<script>
-    document.querySelectorAll('.paper-button').forEach(button => {
-        button.addEventListener('touchstart', function() {
-            setTimeout(() => {
-                this.style.backgroundColor = "transparent";
-                this.style.color = "#666";
-            }, 300);
-        });
-    });
-</script>
+    </main>
 </body>
 </html>
