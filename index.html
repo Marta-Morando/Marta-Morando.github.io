@@ -471,10 +471,12 @@
             }
 
             .page {
-                width: min(640px, calc(100% - 40px));
+                width: 100%;
                 max-width: 640px;
                 margin-left: auto;
                 margin-right: auto;
+                padding-left: 20px;
+                padding-right: 20px;
                 padding-top: 34px;
                 overflow-x: hidden;
             }
@@ -570,6 +572,7 @@
             }
 
             .content {
+                grid-column: 1;
                 width: 100%;
                 max-width: 100%;
                 padding-right: 0;
