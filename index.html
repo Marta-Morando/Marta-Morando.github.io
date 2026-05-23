@@ -86,6 +86,47 @@
             border-radius: 6px;
         }
 
+        .photo-contact {
+            width: 205px;
+            margin: -10px 0 18px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.55;
+            text-align: center;
+        }
+
+        .photo-contact a {
+            position: relative;
+            display: inline-block;
+            color: inherit;
+        }
+
+        .photo-contact a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -2px;
+            height: 1px;
+            background: currentColor;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.22s ease;
+        }
+
+        .photo-contact a:hover {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .photo-contact a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .photo-role {
+            color: #000000;
+        }
+
         .role {
             margin: 0 0 2px;
             font-size: 14px;
@@ -193,6 +234,11 @@
 
         .intro p {
             margin: 0 0 10px;
+        }
+
+        .intro .job-market {
+            color: #9a4f4f;
+            font-weight: 700;
         }
 
         .intro a,
@@ -357,10 +403,10 @@
         }
 
         .funders[open] p {
-            max-width: 440px;
             padding: 0;
             border: 0;
             background: transparent;
+            white-space: nowrap;
         }
 
         .entry {
@@ -425,6 +471,7 @@
             color: #9a4f4f;
             border-color: #ddb8b8;
             background: #fff7f7;
+            font-weight: 700;
         }
 
         .tag-button:hover {
@@ -517,6 +564,11 @@
                 border-radius: 4px;
             }
 
+            .photo-contact {
+                width: min(200px, 72vw);
+                margin: -16px 0 22px;
+            }
+
             h1 {
                 font-size: 27px;
                 margin-bottom: 0;
@@ -604,6 +656,10 @@
             .paper-button,
             .funders summary {
                 font-size: 12px;
+            }
+
+            .funders[open] p {
+                white-space: normal;
             }
 
             .entry {
@@ -695,6 +751,12 @@
                     <img src="pictures/profile.jpg" alt="Marta Morando">
                 </figure>
 
+                <div class="photo-contact">
+                    <span class="photo-role">PhD candidate</span><br>
+                    <span>London School of Economics</span><br>
+                    <a href="mailto:m.morando1@lse.ac.uk">m.morando1@lse.ac.uk</a>
+                </div>
+
                 <div class="quick-links" aria-label="Main links">
                     <a href="cv/cv_morando_marta.pdf" target="_blank">download CV</a>
                     <a href="mailto:m.morando1@lse.ac.uk">email</a>
@@ -721,8 +783,9 @@
             <section class="content">
                 <section class="intro" id="about">
                     <p>I am a PhD candidate in Economics at the London School of Economics, where I am affiliated with <a href="https://sticerd.lse.ac.uk/" target="_blank">STICERD</a>.</p>
-                    <p>I work primarily in political economy, at its intersection with organisational, labour, and public economics.</p>
-                    <p>I study how interactions between the state and external actors shape public sector effectiveness, and how values, identities, and norms are reflected in the labour market and in the direction of technological change.</p>
+                    <p>I work in political economy, at its intersection with public and organisational economics.</p>
+                    <p>I study how interactions between the state and external actors shape public sector effectiveness, and how values, identities, and norms are reflected in the economy.</p>
+                    <p class="job-market">I will be on the 2026–2027 academic job market.</p>
                 </section>
 
                 <h2 class="section-title" id="working-papers">Working Papers</h2>
@@ -737,7 +800,7 @@
                         <button class="paper-button" onclick="copyBibTeX('dossimorando_2025')">bibtex</button>
                         <details class="funders">
                             <summary>funders</summary>
-                            <p>STICERD and Phelan US Centre</p>
+                            <p>STICERD, Hayek Programme, and Phelan US Centre</p>
                         </details>
                     </div>
                     <div class="abstract-text" id="abstract-text-1">
@@ -754,7 +817,7 @@
                     <div class="button-container no-coauthors">
                         <details class="funders">
                             <summary>funders</summary>
-                            <p>Google Cloud Research and STICERD</p>
+                            <p>Google Cloud Research, Programme on Cohesive Capitalism, and STICERD</p>
                         </details>
                     </div>
                 </article>
