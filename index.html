@@ -282,7 +282,7 @@
         }
 
         .writing-title {
-            font-size: 13.2px;
+            font-size: 12.2px;
             color: var(--text);
         }
 
@@ -340,6 +340,10 @@
             margin: 2px 0 0;
             color: var(--muted);
             font-size: 12.3px;
+        }
+
+        .entry-note {
+            font-size: 11.6px;
         }
 
         .funders {
@@ -412,6 +416,16 @@
             border: 0;
             background: transparent;
             white-space: nowrap;
+        }
+
+        .presentations[open] {
+            flex: 1 1 100%;
+            align-items: flex-start;
+        }
+
+        .presentations[open] p {
+            max-width: 68ch;
+            white-space: normal;
         }
 
         .entry {
@@ -672,6 +686,10 @@
                 line-height: 1.32;
             }
 
+            .writing-title {
+                font-size: 12px;
+            }
+
             .research-coauthors,
             .entry-note,
             .teaching-list,
@@ -679,6 +697,10 @@
             .paper-button,
             .funders summary {
                 font-size: 11.5px;
+            }
+
+            .entry-note {
+                font-size: 11px;
             }
 
             .paper-button {
@@ -840,6 +862,10 @@
                             <summary>funders</summary>
                             <p>Google Cloud Research, Programme on Cohesive Capitalism, and STICERD</p>
                         </details>
+                        <details class="funders presentations">
+                            <summary>presentations</summary>
+                            <p>BSE Summer Forum; LSE Department of Economics; LSE POID Seminar; LSE Department of Government</p>
+                        </details>
                     </div>
                 </article>
 
@@ -857,6 +883,10 @@
                             <summary>funders</summary>
                             <p>STICERD, Hayek Programme, and Phelan US Centre</p>
                         </details>
+                        <details class="funders presentations">
+                            <summary>presentations</summary>
+                            <p>BSE Summer Forum; IEB Workshop on Political Economy; UniCredit Marco Fanno Alumni Workshop; Environmental Populism Conference; NICEP Conference; LSE Department of Government; LSE Department of Economics; Hayek Workshop on Institutions and Political Economy in Historical Perspective; Society for Economic Dynamics Annual Meeting; EEA-ESEM Annual Congress; ASREC Europe Conference; Bristol Economics of Innovation Workshop; Lewis Lab Graduate Student Workshop; LSE POID Seminar</p>
+                        </details>
                         <span class="button-separator">|</span>
                         <span class="research-coauthors">with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a></span>
                     </div>
@@ -873,6 +903,10 @@
                             <summary>funders</summary>
                             <p>STICERD</p>
                         </details>
+                        <details class="funders presentations">
+                            <summary>presentations</summary>
+                            <p>LSE Department of Economics; IFS/STICERD/UCL Development Work in Progress Seminar; Warwick-LSE Political Economy Conference</p>
+                        </details>
                         <span class="button-separator">|</span>
                         <span class="research-coauthors">with <a href="https://www.lse.ac.uk/economics/people/research-students/Beyza-Gulmezoglu" target="_blank">Beyza Gulmezoglu</a> and <a href="https://sites.google.com/view/eddyzou/home" target="_blank">Eddy Zou</a></span>
                     </div>
@@ -880,6 +914,7 @@
                 <article class="entry">
                     <p class="entry-title">A Guide on How to Interview with AI</p>
                 </article>
+                <!-- Temporarily hidden: joint paper with Gaia Dossi and Matthew OBrien.
                 <article class="entry">
                     <p class="entry-title">The Cost of Identity: Theory and Experimental Evidence from the Energy Labour Market</p>
                     <div class="button-container">
@@ -889,6 +924,10 @@
                             <summary>funders</summary>
                             <p>STICERD and Global School of Sustainability</p>
                         </details>
+                        <details class="funders presentations">
+                            <summary>presentations</summary>
+                            <p>LSE Department of Economics</p>
+                        </details>
                         <span class="button-separator">|</span>
                         <span class="research-coauthors">with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a> and <a href="https://matt-obrien.com/" target="_blank">Matthew OBrien</a></span>
                     </div>
@@ -896,6 +935,7 @@
                         How do private and social identities affect occupational choice? We study this question in the energy labor market, where oil and gas firms play a fundamental role in the green transition. We design a novel survey experiment and administer it to first-time job seekers. We find that individuals assign positive amenity value to working for a company whose core business aligns with their environmental identity and disamenity value to those that conflict with it. Respondents with green identities are willing to forgo 20% of their salary to work in a renewable energy firm rather than a generic energy company, and require a 15% wage premium to accept a job in an oil and gas firm. This pattern also holds when individuals apply to work in teams focusing on clean energy within these firms. To isolate social-image effects, we randomize whether job choices are private or publicly disclosed. Social image concerns significantly influence occupational choices, especially for jobs perceived as socially stigmatized. We develop a model of occupational choice in which individuals have private preferences over jobs and derive utility from aligning with social norms. In structural simulations, we study how the social environment shapes the allocation of talent, productivity, and the pace of the green transition.
                     </div>
                 </article>
+                -->
 
                 <h2 class="section-title" id="other-writing">Other Writing</h2>
                 <article class="entry compact-writing-entry">
