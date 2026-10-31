@@ -793,6 +793,12 @@
   institution = {Centre for Economic Performance (CEP), London School of Economics and Political Science},
   address     = {London},
 }`,
+                'gulmezoglu_morando_zou_2026': `@unpublished{gulmezoglu_morando_zou_2026,
+  title  = {The Geography of Development Programs},
+  author = {Gulmezoglu, Beyza and Morando, Marta and Zou, Eddy},
+  year   = {2026},
+  note   = {Working paper},
+}`,
             };
 
             const bibtex = citations[citationKey];
@@ -924,6 +930,7 @@
                     <div class="button-container">
                         <button class="abstract-button" type="button" onclick="toggleAbstract('abstract-text-geography', 'button-icon-geography')">abstract <span id="button-icon-geography">+</span></button>
                         <button class="paper-button" type="button" disabled>draft coming soon</button>
+                        <button class="paper-button" type="button" onclick="copyBibTeX('gulmezoglu_morando_zou_2026')">bibtex</button>
                         <details class="funders">
                             <summary>funders</summary>
                             <p>STICERD</p>
