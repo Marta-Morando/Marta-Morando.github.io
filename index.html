@@ -784,6 +784,15 @@
 
         function copyBibTeX(citationKey) {
             const citations = {
+                'morando_2026': `@techreport{morando_2026,
+  title       = {Make or Buy the State? Consulting in the Public Sector},
+  author      = {Morando, Marta},
+  year        = {2026},
+  month       = {November},
+  type        = {Job Market Paper},
+  institution = {London School of Economics and Political Science},
+  url         = {https://martamorando.com/papers/jmp_morando.pdf},
+}`,
                 'dossimorando_2026': `@techreport{dossi_morando_2026,
   title       = {Polarized Technologies},
   author      = {Dossi, Gaia and Morando, Marta},
@@ -893,6 +902,7 @@
                     <div class="button-container no-coauthors">
                         <button class="abstract-button" type="button" aria-expanded="false" aria-controls="abstract-text-jmp" onclick="toggleAbstract('abstract-text-jmp', 'button-icon-jmp')">abstract <span id="button-icon-jmp" aria-hidden="true">+</span></button>
                         <a class="paper-button" href="papers/jmp_morando.pdf" target="_blank">paper</a>
+                        <button class="paper-button" type="button" onclick="copyBibTeX('morando_2026')">bibtex</button>
                         <details class="funders">
                             <summary>funders</summary>
                             <p>Google Cloud Research, Programme on Cohesive Capitalism, and STICERD</p>
