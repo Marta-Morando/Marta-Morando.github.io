@@ -779,6 +779,7 @@
                 abstractText.style.display = 'none';
                 buttonSpan.textContent = '+';
             }
+            buttonSpan.closest('button').setAttribute('aria-expanded', abstractText.style.display === 'block');
         }
 
         function copyBibTeX(citationKey) {
@@ -886,9 +887,12 @@
 
                 <h2 class="section-title" id="job-market-paper">Job Market Paper</h2>
                 <article class="entry">
-                    <p class="entry-title">Make or Buy the State? Consulting in the Public Sector</p>
+                    <div class="research-title">
+                        <a href="papers/jmp_morando.pdf" target="_blank">Make or Buy the State? Consulting in the Public Sector</a>
+                    </div>
                     <div class="button-container no-coauthors">
-                        <button class="paper-button" type="button" disabled>coming soon</button>
+                        <button class="abstract-button" type="button" aria-expanded="false" aria-controls="abstract-text-jmp" onclick="toggleAbstract('abstract-text-jmp', 'button-icon-jmp')">abstract <span id="button-icon-jmp" aria-hidden="true">+</span></button>
+                        <a class="paper-button" href="papers/jmp_morando.pdf" target="_blank">paper</a>
                         <details class="funders">
                             <summary>funders</summary>
                             <p>Google Cloud Research, Programme on Cohesive Capitalism, and STICERD</p>
@@ -897,6 +901,9 @@
                             <summary>presentations</summary>
                             <p>BSE Summer Forum; LSE Department of Economics; LSE POID Seminar; LSE Department of Government</p>
                         </details>
+                    </div>
+                    <div class="abstract-text" id="abstract-text-jmp">
+                        What objectives guide the organisation of public production? I examine the role of productivity gains and citizens’ policy preferences in the context of consulting services in Italy. Using a natural experiment that relaxed limits on municipal consulting expenditure, I show that access to consulting improves productivity: it boosts public service output while lowering budgetary needs. These effects are accompanied by a reorganisation of internal capacity: municipalities spend less on in-house employees, reducing the number of low-skilled administrative workers. Despite these productivity gains, a large-scale survey with embedded AI-led interviews reveals that citizens are willing to pay higher taxes to protect public employment and cut consulting. Interviews and information experiments show that this is partly motivated by beliefs that consulting is economically wasteful. Information on the economic benefits of consulting reduces citizens’ willingness to pay for public employment by 40%, but does not eliminate it. The residual willingness to pay is consistent with perceived local economic benefits from public sector employment. Citizens’ policy preferences can help explain why states choose less productive arrangements. In a second survey, politicians and senior bureaucrats reduce their support for consulting when informed of citizens’ demand for public employment. Taken together, these results suggest that states face a trade-off between improving productivity and responding to citizens’ beliefs and preferences over how public production is organised.
                     </div>
                 </article>
 
