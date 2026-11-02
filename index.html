@@ -838,7 +838,6 @@
             popup.document.close();
         }
     </script>
-</head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6Y02FCWKZ"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -846,6 +845,8 @@
     gtag('js', new Date());
     gtag('config', 'G-Q6Y02FCWKZ');
 </script>
+<script src="analytics.js" defer></script>
+</head>
 <body>
     <main class="page">
         <div class="layout">
@@ -865,7 +866,7 @@
                 </div>
 
                 <div class="quick-links" aria-label="Main links">
-                    <a href="cv/cv_morando_marta.pdf" target="_blank">download CV</a>
+                    <a href="cv/cv_morando_marta.pdf" target="_blank" data-analytics-event="cv_click">download CV</a>
                     <a href="mailto:m.morando1@lse.ac.uk">email</a>
                 </div>
 
@@ -897,12 +898,12 @@
                 <h2 class="section-title" id="job-market-paper">Job Market Paper</h2>
                 <article class="entry">
                     <div class="research-title">
-                        <a href="papers/jmp_morando.pdf" target="_blank">Make or Buy the State? Consulting in the Public Sector</a>
+                        <a href="papers/jmp_morando.pdf" target="_blank" data-analytics-event="jmp_paper_click">Make or Buy the State? Consulting in the Public Sector</a>
                     </div>
                     <div class="button-container no-coauthors">
-                        <button class="abstract-button" type="button" aria-expanded="false" aria-controls="abstract-text-jmp" onclick="toggleAbstract('abstract-text-jmp', 'button-icon-jmp')">abstract <span id="button-icon-jmp" aria-hidden="true">+</span></button>
-                        <a class="paper-button" href="papers/jmp_morando.pdf" target="_blank">paper</a>
-                        <button class="paper-button" type="button" onclick="copyBibTeX('morando_2026')">bibtex</button>
+                        <button class="abstract-button" type="button" aria-expanded="false" aria-controls="abstract-text-jmp" data-analytics-event="jmp_abstract_open" onclick="toggleAbstract('abstract-text-jmp', 'button-icon-jmp')">abstract <span id="button-icon-jmp" aria-hidden="true">+</span></button>
+                        <a class="paper-button" href="papers/jmp_morando.pdf" target="_blank" data-analytics-event="jmp_paper_click">paper</a>
+                        <button class="paper-button" type="button" data-analytics-event="jmp_bibtex_click" onclick="copyBibTeX('morando_2026')">bibtex</button>
                         <details class="funders">
                             <summary>funders</summary>
                             <p>Google Cloud Research, Programme on Cohesive Capitalism, and STICERD</p>
@@ -920,13 +921,13 @@
                 <h2 class="section-title" id="working-papers">Working Papers</h2>
                 <article class="entry">
                     <div class="research-title">
-                        <a href="papers/polarizedtech.pdf" target="_blank">Polarized Technologies</a>
+                        <a href="papers/polarizedtech.pdf" target="_blank" data-analytics-event="polarizedtech_paper_click">Polarized Technologies</a>
                     </div>
                     <div class="button-container">
-                        <button class="abstract-button" onclick="toggleAbstract('abstract-text-1', 'button-icon-1')">abstract <span id="button-icon-1">+</span></button>
-                        <a class="paper-button" href="slides/slides_polarizedtech.pdf" target="_blank">slides</a>
-                        <a class="paper-button" href="papers/polarizedtech.pdf" target="_blank">paper</a>
-                        <button class="paper-button" onclick="copyBibTeX('dossimorando_2026')">bibtex</button>
+                        <button class="abstract-button" data-analytics-event="polarizedtech_abstract_open" onclick="toggleAbstract('abstract-text-1', 'button-icon-1')">abstract <span id="button-icon-1">+</span></button>
+                        <a class="paper-button" href="slides/slides_polarizedtech.pdf" target="_blank" data-analytics-event="polarizedtech_slides_click">slides</a>
+                        <a class="paper-button" href="papers/polarizedtech.pdf" target="_blank" data-analytics-event="polarizedtech_paper_click">paper</a>
+                        <button class="paper-button" data-analytics-event="polarizedtech_bibtex_click" onclick="copyBibTeX('dossimorando_2026')">bibtex</button>
                         <details class="funders">
                             <summary>funders</summary>
                             <p>STICERD, Hayek Programme, and Phelan US Centre</p>
@@ -946,9 +947,9 @@
                 <article class="entry">
                     <p class="entry-title">The Geography of Development Programs</p>
                     <div class="button-container">
-                        <button class="abstract-button" type="button" onclick="toggleAbstract('abstract-text-geography', 'button-icon-geography')">abstract <span id="button-icon-geography">+</span></button>
+                        <button class="abstract-button" type="button" data-analytics-event="geography_abstract_open" onclick="toggleAbstract('abstract-text-geography', 'button-icon-geography')">abstract <span id="button-icon-geography">+</span></button>
                         <button class="paper-button" type="button" disabled>draft coming soon</button>
-                        <button class="paper-button" type="button" onclick="copyBibTeX('gulmezoglu_morando_zou_2026')">bibtex</button>
+                        <button class="paper-button" type="button" data-analytics-event="geography_bibtex_click" onclick="copyBibTeX('gulmezoglu_morando_zou_2026')">bibtex</button>
                         <details class="funders">
                             <summary>funders</summary>
                             <p>STICERD</p>
@@ -992,7 +993,7 @@
                 <article class="entry">
                     <p class="entry-title">A Guide on How to Interview with AI</p>
                     <div class="button-container no-coauthors">
-                        <button class="abstract-button" type="button" onclick="toggleAbstract('abstract-text-ai-interview', 'button-icon-ai-interview')">short abstract <span id="button-icon-ai-interview">+</span></button>
+                        <button class="abstract-button" type="button" data-analytics-event="ai_interview_abstract_open" onclick="toggleAbstract('abstract-text-ai-interview', 'button-icon-ai-interview')">short abstract <span id="button-icon-ai-interview">+</span></button>
                     </div>
                     <div class="abstract-text" id="abstract-text-ai-interview">
                         AI-led interviews are a key tool for understanding people’s views and reasoning at scale. This paper provides guidance on when and how to use them in online surveys, highlighting their potential benefits and costs.
@@ -1001,7 +1002,7 @@
                 <article class="entry">
                     <p class="entry-title">Contributive Justice in the Workplace</p>
                     <div class="button-container">
-                        <button class="abstract-button" type="button" onclick="toggleAbstract('abstract-text-contributive-justice', 'button-icon-contributive-justice')">short abstract <span id="button-icon-contributive-justice">+</span></button>
+                        <button class="abstract-button" type="button" data-analytics-event="contributive_justice_abstract_open" onclick="toggleAbstract('abstract-text-contributive-justice', 'button-icon-contributive-justice')">short abstract <span id="button-icon-contributive-justice">+</span></button>
                         <span class="button-separator">|</span>
                         <span class="research-coauthors">with <a href="https://jakobakesson.com/" target="_blank">Jakob Akesson</a> and <a href="https://sites.google.com/view/timbesley" target="_blank">Tim Besley</a></span>
                     </div>
