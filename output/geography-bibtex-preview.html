@@ -1,0 +1,113 @@
+<div id="geography-bibtex-preview" class="viz-dotted-background">
+  <style>
+    #geography-bibtex-preview { padding: 24px 12px; color-scheme: light dark; }
+    #geography-bibtex-preview * { box-sizing: border-box; }
+    #geography-bibtex-preview .paper-surface {
+      --paper-text: light-dark(#222222, #ededeb);
+      --paper-muted: light-dark(#666666, #b8b8b4);
+      --paper-line: light-dark(#cfcfcf, #595956);
+      background: light-dark(#fbfbf7, #232321);
+      color: var(--paper-text);
+      padding: 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 15px;
+      line-height: 1.48;
+    }
+    #geography-bibtex-preview .paper-title { margin: 0 0 7px; font-size: 15px; font-weight: 650; }
+    #geography-bibtex-preview .paper-actions { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+    #geography-bibtex-preview .paper-button,
+    #geography-bibtex-preview summary {
+      display: inline-flex; align-items: center; gap: 5px;
+      min-height: 19px; padding: 0 6px; border: 1px solid var(--paper-line);
+      border-radius: 4px; color: var(--paper-muted); background: transparent;
+      font-family: inherit; font-size: 11.5px; line-height: 17px;
+      list-style: none;
+    }
+    #geography-bibtex-preview summary::-webkit-details-marker { display: none; }
+    #geography-bibtex-preview summary::after { content: "+"; }
+    #geography-bibtex-preview details[open] summary::after { content: "−"; }
+    #geography-bibtex-preview details[open] { flex-basis: 100%; }
+    #geography-bibtex-preview details p { color: var(--paper-muted); font-size: 12px; margin: 7px 0; }
+    #geography-bibtex-preview .paper-button:hover:not(:disabled),
+    #geography-bibtex-preview summary:hover { border-color: var(--paper-text); color: var(--paper-text); }
+    #geography-bibtex-preview .paper-button:disabled { cursor: default; }
+    #geography-bibtex-preview .coauthors { color: var(--paper-muted); font-size: 12.3px; margin: 8px 0 0; }
+    #geography-bibtex-preview .abstract { margin: 14px 0 0; font-size: 13px; }
+    #geography-bibtex-preview .citation-window {
+      margin: 24px auto 0; max-width: 500px;
+      background: light-dark(#ffffff, #1d1d1b);
+      border: 1px solid var(--paper-line); border-radius: 7px;
+      color: var(--paper-text); overflow: hidden;
+    }
+    #geography-bibtex-preview .citation-titlebar {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 9px 14px; border-bottom: 1px solid var(--paper-line);
+      background: light-dark(#f4f4f4, #30302d); font-size: 12px;
+    }
+    #geography-bibtex-preview .close-button { color: inherit; background: transparent; border: 0; font: inherit; padding: 2px 5px; }
+    #geography-bibtex-preview pre { margin: 0; padding: 20px; white-space: pre-wrap; overflow-wrap: anywhere; font-family: monospace; font-size: 11px; line-height: 1.6; }
+    #geography-bibtex-preview [hidden] { display: none; }
+    @media (max-width: 480px) {
+      #geography-bibtex-preview { padding: 16px 0; }
+      #geography-bibtex-preview .paper-surface { padding: 18px 14px; }
+      #geography-bibtex-preview pre { padding: 14px; }
+    }
+    @media (pointer: coarse) {
+      #geography-bibtex-preview .paper-button,
+      #geography-bibtex-preview summary,
+      #geography-bibtex-preview .close-button { min-height: 44px; }
+    }
+  </style>
+  <article class="paper-surface" aria-label="Geography paper citation preview">
+    <h3 class="paper-title">The Geography of Development Programs</h3>
+    <div class="paper-actions">
+      <button class="paper-button cursor-interaction" type="button" data-action="abstract" aria-expanded="false" aria-controls="geo-preview-abstract">abstract <span>+</span></button>
+      <button class="paper-button" type="button" disabled>draft coming soon</button>
+      <button class="paper-button cursor-interaction" type="button" data-action="bibtex" aria-expanded="true" aria-controls="geo-preview-citation">bibtex</button>
+      <details><summary class="cursor-interaction">funders</summary><p>STICERD</p></details>
+      <details><summary class="cursor-interaction">presentations</summary><p>LSE Department of Economics; IFS/STICERD/UCL Development Work in Progress Seminar; Warwick-LSE Political Economy Conference; World Bank 11th Urbanization and Development Conference*; Yale Y-Rise Conference 2026*<br><em>* scheduled</em></p></details>
+    </div>
+    <p class="coauthors">with Beyza Gulmezoglu and Eddy Zou</p>
+    <p class="abstract" id="geo-preview-abstract" hidden>International organisations devote substantial resources to reaching the poorest segments of the population. Yet we know little about how these resources are distributed and why. In this paper, we provide the first systematic evidence on where development programs go within countries. We assemble a new dataset linking roughly 5,000 geocoded World Bank projects across 130 countries since 1995 to district-level nighttime lights and complete records of the personnel assigned to each project. We find that aid flows disproportionately to richer areas: 51% of World Bank projects exhibit positive “site selection,” landing in districts significantly richer than their neighbours in the same province. In contrast, only about one-third of World Bank projects are targeted to poorer districts. The pattern is pervasive across sectors and is not explained by population-based targeting. It does not reflect a gain in performance: projects in richer areas are no more successful according to the World Bank’s own independent ratings. Supply-side factors related to World Bank personnel help explain where projects are located. World Bank project managers, who have substantial discretion over choosing project locations, account for a sizeable share of the total variation in site selection, more than year, sector, and country fixed effects combined. We unpack the role of career incentives, managerial skills, and learning in driving site selection. These findings suggest that where aid goes within countries is shaped not only by the needs of the recipient country but also by the organizational structure of the agencies that deliver it.</p>
+    <section class="citation-window" id="geo-preview-citation" aria-label="BibTeX citation popup">
+      <div class="citation-titlebar"><span>BibTeX Citation</span><button class="close-button cursor-interaction" type="button" data-action="close" aria-label="Close BibTeX citation">×</button></div>
+      <pre>@techreport{gulmezoglu_morando_zou_2026,
+  title       = {The Geography of Development Programs},
+  author      = {Gulmezoglu, Beyza and Morando, Marta and Zou, Eddy},
+  year        = {2026},
+  type        = {Working Paper},
+  institution = {London School of Economics and Political Science},
+}</pre>
+    </section>
+  </article>
+  <script>
+    (() => {
+      const root = document.getElementById('geography-bibtex-preview');
+      const abstract = root.querySelector('#geo-preview-abstract');
+      const citation = root.querySelector('#geo-preview-citation');
+      const abstractButton = root.querySelector('[data-action="abstract"]');
+      const citationButton = root.querySelector('[data-action="bibtex"]');
+      const closeButton = root.querySelector('[data-action="close"]');
+      function apply(state) {
+        abstract.hidden = !state.abstractOpen;
+        citation.hidden = state.citationOpen === false;
+        abstractButton.setAttribute('aria-expanded', String(!abstract.hidden));
+        abstractButton.querySelector('span').textContent = abstract.hidden ? '+' : '−';
+        citationButton.setAttribute('aria-expanded', String(!citation.hidden));
+      }
+      function save() {
+        if (window.openai?.setWidgetState) {
+          window.openai.setWidgetState({ modelContent: null, privateContent: { abstractOpen: !abstract.hidden, citationOpen: !citation.hidden } }).catch(() => {});
+        }
+      }
+      apply(window.openai?.widgetState?.privateContent || {});
+      window.addEventListener('openai:set_globals', event => {
+        const state = event.detail?.globals?.widgetState;
+        if (state) apply(state.privateContent || {});
+      });
+      abstractButton.addEventListener('click', () => { apply({ abstractOpen: abstract.hidden, citationOpen: !citation.hidden }); save(); });
+      citationButton.addEventListener('click', () => { apply({ abstractOpen: !abstract.hidden, citationOpen: true }); save(); });
+      closeButton.addEventListener('click', () => { apply({ abstractOpen: !abstract.hidden, citationOpen: false }); citationButton.focus(); save(); });
+    })();
+  </script>
+</div>

@@ -24,6 +24,7 @@ body = re.sub(r'src="(pictures/[^"]+)"', embed_image, body)
 body = re.sub(r'href="((?:papers|slides|cv)/[^"]+)"', r'href="https://martamorando.com/\1"', body)
 toggle = source.split('<script>', 1)[1].split('function copyBibTeX', 1)[0]
 script = toggle + '''
+toggleAbstract('abstract-text-geography', 'button-icon-geography');
 function copyBibTeX() {
     const root = document.getElementById('website-preview');
     const existing = root.querySelector('.preview-citation');
@@ -37,7 +38,7 @@ function copyBibTeX() {
 '''
 fragment = '<div id="website-preview">\n<style>\n' + css + '\n#website-preview .profile { position: static; }\n</style>\n' + body + '\n</div>\n<script>\n' + script + '\n</script>\n'
 out = root / 'output' / 'website-preview.html'
-out.write_text(fragment, encoding='utf-8')
+out.write_text('\n'.join(line.rstrip() for line in fragment.splitlines()) + '\n', encoding='utf-8')
 assert out.stat().st_size < 1_000_000
 check = out.read_text(encoding='utf-8')
 assert '\\"' not in check and '\\n' not in check
