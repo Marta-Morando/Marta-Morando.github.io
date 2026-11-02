@@ -24,7 +24,7 @@ body = re.sub(r'src="(pictures/[^"]+)"', embed_image, body)
 body = re.sub(r'href="((?:papers|slides|cv)/[^"]+)"', r'href="https://martamorando.com/\1"', body)
 toggle = source.split('<script>', 1)[1].split('function copyBibTeX', 1)[0]
 script = toggle + '''
-toggleAbstract('abstract-text-geography', 'button-icon-geography');
+toggleAbstract('abstract-text-contributive-justice', 'button-icon-contributive-justice');
 function copyBibTeX() {
     const root = document.getElementById('website-preview');
     const existing = root.querySelector('.preview-citation');

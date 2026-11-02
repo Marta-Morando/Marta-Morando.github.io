@@ -355,6 +355,10 @@
             margin: 0;
             display: inline-flex;
             align-items: center;
+            gap: 0;
+        }
+
+        .funders[open] {
             gap: 7px;
         }
 
@@ -536,7 +540,7 @@
             margin-top: 8px;
             max-width: 68ch;
             color: #555650;
-            font-size: 13px;
+            font-size: 13.6px;
         }
 
         .teaching-list {
@@ -560,6 +564,7 @@
 
         .teaching-highlight {
             color: var(--text);
+            font-weight: 700;
         }
 
         @media (max-width: 1024px), (max-device-width: 480px), (hover: none) and (pointer: coarse), (orientation: portrait) {
@@ -805,7 +810,7 @@
             <section class="content">
                 <section class="intro" id="about">
                     <p>I am a PhD candidate in economics at the <strong>London School of Economics</strong>.</p>
-                    <p>My research interests are in <strong>political</strong>, <strong>public</strong>, and <strong>labour</strong> economics. <span class="research-summary">I study how public and private organisations allocate talent and resources, and how views, values and norms influence organisational and labour market decisions.</span></p>
+                    <p>My research interests are in <strong>public</strong>, <strong>political</strong>, and <strong>labour</strong> economics. <span class="research-summary">I study how public and private organisations allocate workers and resources, and how views, values and norms influence organisational and labour market decisions.</span></p>
                     <p class="job-market">I will be on the 2026–2027 academic job market.</p>
                 </section>
 
@@ -856,23 +861,24 @@
                     <div class="button-container">
                         <button class="abstract-button" type="button" onclick="toggleAbstract('abstract-text-geography', 'button-icon-geography')">abstract <span id="button-icon-geography">+</span></button>
                         <button class="paper-button" type="button" disabled>draft coming soon</button>
+                        <button class="paper-button" type="button" onclick="copyBibTeX('gulmezoglu_morando_zou_2026')">bibtex</button>
                         <details class="funders">
                             <summary>funders</summary>
                             <p>STICERD</p>
                         </details>
                         <details class="funders presentations">
                             <summary>presentations</summary>
-                            <p>LSE Department of Economics; IFS/STICERD/UCL Development Work in Progress Seminar; Warwick-LSE Political Economy Conference; World Bank 11th Urbanization and Development Conference*; Yale Y-Rise Conference 2026*</p>
+                            <p>LSE Department of Economics; IFS/STICERD/UCL Development Work in Progress Seminar; Warwick-LSE Political Economy Conference; World Bank 11th Urbanization and Development Conference*; Yale Y-Rise Conference 2026*<br><em>* scheduled</em></p>
                         </details>
                         <span class="button-separator">|</span>
                         <span class="research-coauthors">with <a href="https://www.lse.ac.uk/economics/people/research-students/Beyza-Gulmezoglu" target="_blank">Beyza Gulmezoglu</a> and <a href="https://sites.google.com/view/eddyzou/home" target="_blank">Eddy Zou</a></span>
                     </div>
                     <div class="abstract-text" id="abstract-text-geography">
-                        International organisations devote substantial resources to reaching the poorest segments of the population. Yet we know little about how these resources are distributed and why. In this paper, we provide the first systematic evidence on where development programs go within countries. We assemble a new dataset linking roughly 5,000 geocoded World Bank projects across 130 countries since 1995 to district-level nighttime lights and complete records of the personnel assigned to each project. We find that aid flows disproportionately to richer areas: 51% of World Bank projects exhibit positive “site selection,” landing in districts significantly richer than their neighbours in the same province. In contrast, only about one-third of World Bank projects are targeted to poorer districts. The pattern is pervasive across sectors and is not explained by population-based targeting. It does not reflect a gain in performance: projects in richer areas are no more successful according to the World Bank’s own independent ratings. A sizeable share of the total variation in site selection can be explained by supply-side factors related to the personnel of the World Bank. World Bank project managers, who have substantial discretion over choosing project locations, account for a sizeable share of the total variation in site selection, more than year, sector, and country fixed effects combined. We unpack the role of career incentives, managerial skills, and learning in driving site selection. These findings suggest that where aid goes within countries is shaped not only by the needs of the recipient country but also by the organizational structure of the agencies that deliver it.
+                        International organisations devote substantial resources to reaching the poorest segments of the population. Yet we know little about how these resources are distributed and why. In this paper, we provide the first systematic evidence on where development programs go within countries. We assemble a new dataset linking roughly 5,000 geocoded World Bank projects across 130 countries since 1995 to district-level nighttime lights and complete records of the personnel assigned to each project. We find that aid flows disproportionately to richer areas: 51% of World Bank projects exhibit positive “site selection,” landing in districts significantly richer than their neighbours in the same province. In contrast, only about one-third of World Bank projects are targeted to poorer districts. The pattern is pervasive across sectors and is not explained by population-based targeting. It does not reflect a gain in performance: projects in richer areas are no more successful according to the World Bank’s own independent ratings. Supply-side factors related to World Bank personnel help explain where projects are located. World Bank project managers, who have substantial discretion over choosing project locations, account for a sizeable share of the total variation in site selection, more than year, sector, and country fixed effects combined. We unpack the role of career incentives, managerial skills, and learning in driving site selection. These findings suggest that where aid goes within countries is shaped not only by the needs of the recipient country but also by the organizational structure of the agencies that deliver it.
                     </div>
                 </article>
                 <article class="entry">
-                    <p class="entry-title">The Cost of Identity</p>
+                    <p class="entry-title">The Cost of Identity: Theory and Evidence from the Energy Labour Market</p>
                     <div class="button-container">
                         <button class="paper-button" type="button" disabled>coming soon</button>
 
@@ -894,10 +900,23 @@
                 <h2 class="section-title" id="work-in-progress">Work in Progress</h2>
                 <article class="entry">
                     <p class="entry-title">A Guide on How to Interview with AI</p>
+                    <div class="button-container no-coauthors">
+                        <button class="abstract-button" type="button" onclick="toggleAbstract('abstract-text-ai-interview', 'button-icon-ai-interview')">short abstract <span id="button-icon-ai-interview">+</span></button>
+                    </div>
+                    <div class="abstract-text" id="abstract-text-ai-interview">
+                        AI-led interviews are a key tool for understanding people’s views and reasoning at scale. This paper provides guidance on when and how to use them in online surveys, highlighting their potential benefits and costs.
+                    </div>
                 </article>
                 <article class="entry">
                     <p class="entry-title">Contributive Justice in the Workplace</p>
-                    <span class="research-coauthors">with <a href="https://jakobakesson.com/" target="_blank">Jakob Akesson</a> and <a href="https://sites.google.com/view/timbesley" target="_blank">Tim Besley</a></span>
+                    <div class="button-container">
+                        <button class="abstract-button" type="button" onclick="toggleAbstract('abstract-text-contributive-justice', 'button-icon-contributive-justice')">short abstract <span id="button-icon-contributive-justice">+</span></button>
+                        <span class="button-separator">|</span>
+                        <span class="research-coauthors">with <a href="https://jakobakesson.com/" target="_blank">Jakob Akesson</a> and <a href="https://sites.google.com/view/timbesley" target="_blank">Tim Besley</a></span>
+                    </div>
+                    <div class="abstract-text" id="abstract-text-contributive-justice">
+                        Do employees value their employer’s contribution to society? We link firm-level financial data to employee job reviews and study the introduction of mandatory corporate social responsibility spending. Using an event-study design, we find that firms subject to the mandate increase their social spending and that their employees report higher job satisfaction.
+                    </div>
                 </article>
 
                 <h2 class="section-title" id="other-writing">Other Writing</h2>
@@ -938,7 +957,7 @@
         }
 
 
-toggleAbstract('abstract-text-geography', 'button-icon-geography');
+toggleAbstract('abstract-text-contributive-justice', 'button-icon-contributive-justice');
 function copyBibTeX() {
     const root = document.getElementById('website-preview');
     const existing = root.querySelector('.preview-citation');
