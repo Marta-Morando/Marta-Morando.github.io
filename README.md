@@ -16,6 +16,7 @@ sent by `analytics.js` through the existing Google tag. Open the
 | `polarizedtech_bibtex_click` | Clicking its BibTeX button |
 | `polarizedtech_slides_click` | Clicking its slides link |
 | `geography_abstract_open` | Expanding the Geography abstract |
+| `geography_paper_click` | Clicking the Geography draft button |
 | `geography_bibtex_click` | Clicking the Geography BibTeX button |
 | `ai_interview_abstract_open` | Expanding the AI interviews abstract |
 | `contributive_justice_abstract_open` | Expanding the Contributive Justice abstract |
