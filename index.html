@@ -275,6 +275,21 @@
             margin: 0 0 4px;
         }
 
+        .paper-status {
+            color: #334155;
+            font-size: 13px;
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: 0.005em;
+            white-space: nowrap;
+        }
+
+        .paper-status::before {
+            content: " · ";
+            color: #cbd5e0;
+            margin: 0 2px;
+        }
+
         .research-title > a,
         .entry-title {
             color: var(--link);
@@ -921,7 +936,7 @@
                 <h2 class="section-title" id="working-papers">Working Papers</h2>
                 <article class="entry">
                     <div class="research-title">
-                        <a href="papers/polarizedtech.pdf" target="_blank" data-analytics-event="polarizedtech_paper_click">Polarized Technologies</a>
+                        <a href="papers/polarizedtech.pdf" target="_blank" data-analytics-event="polarizedtech_paper_click">Polarized Technologies</a><span class="paper-status">submitted</span>
                     </div>
                     <div class="button-container">
                         <button class="abstract-button" data-analytics-event="polarizedtech_abstract_open" onclick="toggleAbstract('abstract-text-1', 'button-icon-1')">abstract <span id="button-icon-1">+</span></button>
@@ -934,7 +949,7 @@
                         </details>
                         <details class="funders presentations">
                             <summary>presentations</summary>
-                            <p>BSE Summer Forum; IEB Workshop on Political Economy; UniCredit Marco Fanno Alumni Workshop; Environmental Populism Conference; NICEP Conference; LSE Department of Government; LSE Department of Economics; Hayek Workshop on Institutions and Political Economy in Historical Perspective; Society for Economic Dynamics Annual Meeting; EEA-ESEM Annual Congress; ASREC Europe Conference; Bristol Economics of Innovation Workshop; Lewis Lab Graduate Student Workshop; LSE POID Seminar</p>
+                            <p>BSE Summer Forum; IEB Workshop on Political Economy; UniCredit Marco Fanno Alumni Workshop; Environmental Populism Conference; NICEP Conference; LSE Department of Government; LSE Department of Economics; Hayek Workshop on Institutions and Political Economy in Historical Perspective; Society for Economic Dynamics Annual Meeting; EEA-ESEM Annual Congress; ASREC Europe Conference; Bristol Economics of Innovation Workshop; Lewis Lab Graduate Student Workshop; LSE POID Seminar; 5th Bank of Italy-EIEF Joint Workshop on Applied Microeconomics*<br><em>* scheduled</em></p>
                         </details>
                         <span class="button-separator">|</span>
                         <span class="research-coauthors">with <a href="https://sites.google.com/view/gaiadossi" target="_blank">Gaia Dossi</a></span>
