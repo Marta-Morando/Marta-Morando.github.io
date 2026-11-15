@@ -18,6 +18,7 @@ sent by `analytics.js` through the existing Google tag. Open the
 | `geography_abstract_open` | Expanding the Geography abstract |
 | `geography_paper_click` | A click on the Geography title or paper button |
 | `geography_bibtex_click` | Clicking the Geography BibTeX button |
+| `identity_slides_click` | Clicking the Identity slides link |
 | `ai_interview_abstract_open` | Expanding the AI interviews abstract |
 | `contributive_justice_abstract_open` | Expanding the Contributive Justice abstract |
 | `cv_click` | Clicking the CV link |
