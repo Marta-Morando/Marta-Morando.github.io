@@ -9,6 +9,7 @@ sent by `analytics.js` through the existing Google tag. Open the
 | Event | What is counted |
 | --- | --- |
 | `jmp_paper_click` | A click on the JMP title or paper button |
+| `jmp_prompts_click` | A click on the JMP AI prompts supplement button |
 | `jmp_abstract_open` | Expanding the JMP abstract |
 | `jmp_bibtex_click` | Clicking the JMP BibTeX button |
 | `polarizedtech_paper_click` | A click on the Polarized Technologies title or paper button |
